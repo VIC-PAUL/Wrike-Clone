@@ -7,4 +7,4 @@ Members:
 4.Priyanshu Patil
 5.Victor Paul
 
-IA Manager:Om Prakash
+IA Manager:Om Prakash.
