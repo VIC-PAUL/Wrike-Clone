@@ -8,7 +8,6 @@ import {
   Input,
   Button,
 } from "@chakra-ui/react";
-import { BsArrowLeftShort } from "react-icons/bs";
 
 const Dashboard = () => {
   const videoEl = useRef(null);
