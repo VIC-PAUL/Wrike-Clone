@@ -1,5 +1,6 @@
 import React from "react";
-import Top from "../components/Top";
+import Header from "../components/Header";
+import ContentHomePage from "../components/ContentHomePage";
 
 const Homepage = () => {
   return (
@@ -10,9 +11,17 @@ const Homepage = () => {
       margin:"auto"
     }}
     >
-      <section>
-        <Top />
+      <section style={{
+        color:"white",
+        backgroundColor:"#181f38",
+        // height:"500px"
+      }}>
+        <Header />
       </section>
+      <section>
+        <ContentHomePage />
+      </section>
+
     </div>
   );
 };

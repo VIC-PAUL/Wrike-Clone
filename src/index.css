@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: "T_Norms_Pro",-apple-system,BlinkMacSystemFont,"Helvetica Neue","Segoe UI",Roboto,Oxygen-Sans,"Fira Sans","Droid Sans",Ubuntu,Cantarell,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

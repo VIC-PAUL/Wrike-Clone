@@ -1,0 +1,9 @@
+.firstBox{
+    height: 550px;
+    background-color: #181f38;
+    color: white;
+}
+.firstFBox{
+    font-size: 18px;
+    /* width: 40%; */
+}

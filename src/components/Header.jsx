@@ -183,7 +183,7 @@ const Header = () => {
               style={{
                 width: "100vw",
                 height:"fit-content",
-                border: "1px solid red",
+                border: "1px solid #181f38",
                 color:"black",
                 backgroundColor:"#181f38",
                 marginTop:"10px"
@@ -339,7 +339,7 @@ const Header = () => {
               style={{
                 width: "100vw",
                 height:"fit-content",
-                border: "1px solid red",
+                border: "1px solid #181f38",
                 color:"black",
                 backgroundColor:"#181f38",
                 marginTop:"10px"
@@ -476,7 +476,7 @@ const Header = () => {
               style={{
                 width: "100vw",
                 height:"fit-content",
-                border: "1px solid red",
+                border: "1px solid #181f38",
                 color:"black",
                 backgroundColor:"#181f38",
                 marginTop:"10px"
