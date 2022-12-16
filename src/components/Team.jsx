@@ -14,7 +14,9 @@ import {
 
 
 const Team = ({ prevStep, nextStep, handleChange, values }) => {
+  
   const [isLoading, setIsLoading] = useState(true);
+ 
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -23,6 +25,7 @@ const Team = ({ prevStep, nextStep, handleChange, values }) => {
   const Continue = (e) => {
     e.preventDefault();
     nextStep();
+    
   };
   const Previous = (e) => {
     e.preventDefault();
@@ -96,7 +99,7 @@ const Team = ({ prevStep, nextStep, handleChange, values }) => {
                 type="submit"
                 colorScheme="green"
                 onClick={Previous}
-                mr={150}
+                mr={['50','120','150','150','150','150']}
               >
                 Previous
               </Button>
@@ -107,7 +110,7 @@ const Team = ({ prevStep, nextStep, handleChange, values }) => {
                 type="submit"
                 colorScheme="green"
                 onClick={Continue}
-                ml={180}
+                ml={['50','120','150','150','150','150']}
               >
                 Next
               </Button>

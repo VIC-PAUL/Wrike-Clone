@@ -19,14 +19,30 @@ const Teammembers = ({ prevStep, nextStep, handleChange, values }) => {
       setIsLoading(false);
     }, 500);
   }, []);
-  const Continue = (e) => {
-    e.preventDefault();
-    nextStep();
-  };
+
   const Previous = (e) => {
     e.preventDefault();
     prevStep();
   };
+
+  async function sub(){
+    localStorage.setItem("User", values.email1);
+    let res=await fetch("https://busy-houndstooth-clam.cyclic.app/users",{
+      method:"POST",
+      body:JSON.stringify(values),
+      headers:{
+        "Content-Type":"application/json",
+        "Accept":"application/json"
+      },
+     
+    })
+    res= await res.json()
+    console.log(res);
+    // var users = JSON.parse(localStorage.getItem("Users") || "[]");
+    // users.push(res);
+    // localStorage.setItem("Users", JSON.stringify(res));
+   
+  }
   return (
     <>
       {isLoading ? (
@@ -104,7 +120,7 @@ const Teammembers = ({ prevStep, nextStep, handleChange, values }) => {
                 type="submit"
                 colorScheme="green"
                 onClick={Previous}
-                mr={150}
+                mr={['50','120','150','150','150','150']}
               >
                 Previous
               </Button>
@@ -114,10 +130,10 @@ const Teammembers = ({ prevStep, nextStep, handleChange, values }) => {
                 bgColor="#2F855A"
                 type="submit"
                 colorScheme="green"
-                onClick={Continue}
-                ml={180}
+                onClick={sub}
+                ml={['50','120','150','150','150','150']}
               >
-                Next
+                Submit
               </Button>
             </FormControl>
           </Flex>

@@ -3,7 +3,6 @@ import Employees from "./Employees";
 import ProjName from "./ProjName";
 import SignUp from "./Signup";
 import Space from "./Space";
-import Success from "./Success";
 import Task from "./Task";
 import Team from "./Team";
 import Teammembers from "./Teammembers";
@@ -13,12 +12,11 @@ export default class Sign extends Component {
     step: 1,
     email: "",
     password: "",
-    firstName: "",
-    lastName: "",
+    fullName: "",
     country: "",
     company: "",
     number: "",
-    employees: "",
+    employees: "", 
     dept: "",
     role: "",
     space: "",
@@ -53,8 +51,7 @@ export default class Sign extends Component {
     const {
       email,
       password,
-      firstName,
-      lastName,
+      fullName,
       country,
       company,
       number,
@@ -73,8 +70,7 @@ export default class Sign extends Component {
     const values = {
       email,
       password,
-      firstName,
-      lastName,
+      fullName,
       country,
       company,
       number,
@@ -154,8 +150,6 @@ export default class Sign extends Component {
             values={values}
           />
         );
-      case 8:
-        return <Success />;
       default:
       // do nothing
     }

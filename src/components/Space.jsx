@@ -91,7 +91,7 @@ const Space = ({ prevStep, nextStep, handleChange, values }) => {
                 type="submit"
                 colorScheme="green"
                 onClick={Previous}
-                mr={150}
+                mr={['50','120','150','150','150','150']}
               >
                 Previous
               </Button>
@@ -102,7 +102,7 @@ const Space = ({ prevStep, nextStep, handleChange, values }) => {
                 type="submit"
                 colorScheme="green"
                 onClick={Continue}
-                ml={180}
+                ml={['50','120','150','150','150','150']}
               >
                 Next
               </Button>

@@ -9,69 +9,22 @@ import {
   Image,
   Text,
   Spinner,
+  useToast,
   Link,
 } from "@chakra-ui/react";
 import { Checkbox } from "@chakra-ui/react";
-// import { useNavigate } from "react-router-dom";
-// import { useContext } from "react";
-// import { AuthContext } from "../Context/AuthContext";
+
 
 function SignUp({nextStep,handleChange,values}) {
   const [isLoading, setIsLoading] = useState(true);
-  const [userData, setUserData] = useState({
-    email: "",
-    firstName: "",
-    lastName: "",
-    password: "",
-  });
-  //   const { SignUp } = useContext(AuthContext);
-  //   const toast = useToast();
-  //   const Navigate = useNavigate();
-  //   const [isLargerThan992] = useMediaQuery("(min-width: 992px)");
+  const toast = useToast();
 
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
     }, 500);
   }, []);
-  const onChangeInput = (e) => {
-    const { id, value } = e.target;
-    setUserData({ ...userData, [id]: value });
-  };
-  const handleSubmit = (e) => {
-    // e.preventDefault();
-    // if (
-    //   userData.email == "" ||
-    //   userData.firstName == "" ||
-    //   userData.lastName == "" ||
-    //   userData.password == ""
-    // )
-    //   return toast({
-    //     title: "Fill all the details !!!",
-    //     status: "error",
-    //     duration: 1500,
-    //     isClosable: true,
-    //     position: "top",
-    //   });
-    // SignUp(userData);
-    // setTimeout(() => {
-    //   Navigate("/signin");
-    // }, 2000);
-    // setUserData({
-    //   email: "",
-    //   firstName: "",
-    //   lastName: "",
-    //   password: "",
-    // });
-    // toast({
-    //   title: "Signup Successfull !!!",
-    //   status: "success",
-    //   duration: 1500,
-    //   isClosable: true,
-    //   position: "top",
-    // });
 
-  };
 
   const[country,setCountry]=useState([]);
 
@@ -86,6 +39,20 @@ function SignUp({nextStep,handleChange,values}) {
  },[])
  const Continue = e => {
   e.preventDefault();
+  if (
+    values.email == "" ||
+    values.fullName == "" ||
+    values.number == "" ||
+    values.company == "" ||
+    values.country== ""
+  )
+    return toast({
+      title: "Fill all the details !!!",
+      status: "error",
+      duration: 1500,
+      isClosable: true,
+      position: "top",
+    });
   nextStep();
 }
 
@@ -134,52 +101,54 @@ return (
             />
             <Input
               mb={4}
-              value={userData.firstName}
+              value={values.fullName}
               type="text"
-              id="firstName"
+              id="fullName"
               variant='filled'
-              onChange={(e) => {
-                onChangeInput(e);
-              }}
-              placeholder="Enter first name"
+              onChange={handleChange("fullName")}
+              placeholder="Enter full name"
             />
             {/* <FormLabel htmlFor="lastName">Last Name</FormLabel> */}
             <Input
               mb={4}
-              value={userData.lastName}
-              type="text"
-              id="lastName"
+              value={values.email}
+              type="email"
+              id="email"
               variant='filled'
-              onChange={(e) => {
-                onChangeInput(e);
-              }}
-              placeholder="Enter last name"
+              onChange={handleChange("email")}
+              placeholder="Enter email"
+              
             />
             {/* <FormLabel htmlFor="email">Email address</FormLabel> */}
             <Input
               mb={4}
-              value={userData.number}
+              value={values.password}
+              type="password"
+              id="password"
+              variant='filled'
+              onChange={handleChange("password")}
+              placeholder="Enter password"
+            />
+            <Input
+              mb={4}
+              value={values.number}
               type="number"
               id="number"
               variant='filled'
-              onChange={(e) => {
-                onChangeInput(e);
-              }}
+              onChange={handleChange("number")}
               placeholder="Phone number"
             />
             {/* <FormLabel htmlFor="password">Password</FormLabel> */}
             <Input
               mb={4}
-              value={userData.company}
+              value={values.company}
               id="company"
               variant='filled'
-              onChange={(e) => {
-                onChangeInput(e);
-              }}
+              onChange={handleChange("company")}
               type="text"
               placeholder="Your company name"
             />
-            <Select placeholder="Select Country">
+            <Select placeholder="Select Country" onChange={handleChange("country")} value={values.country}>
               { country.map((dat)=>(
                 <option key={dat.country_id}>{dat.country_name}</option>
               ))

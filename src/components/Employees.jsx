@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import {
   FormControl,
   Button,
@@ -16,6 +17,7 @@ import {
 
 
 const Employees = ({ prevStep, nextStep, handleChange, values }) => {
+ 
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
@@ -71,16 +73,16 @@ const Employees = ({ prevStep, nextStep, handleChange, values }) => {
                 alt="signup"
                 mb={10}
               />
-               <RadioGroup onChange={setValue} value={value}>
+               <RadioGroup onChange={setValue} value={value} m="auto" w={["300px","450px","600px","600px","600px","600px"]}>
                 
             <Stack  direction={['row']} mb={4}>
             
-              <Box  borderWidth='1px' w={80} mr={10}  textAlign="left" pl={4} pt={2} pb={2} borderRadius="lg" borderColor="green">
+              <Box  borderWidth='2px' w={80} mr={10}  textAlign="left" pl={4} pt={2} pb={2} borderRadius="lg" borderColor="grey.200" _hover={{ borderColor: "green.300", color: " black" }}>
               <Radio size="md" name="1" value='1' colorScheme="green">
                 2-20 employees
               </Radio>
               </Box>
-              <Box borderWidth='1px'w={80} mr={10} textAlign="left" pl={4} pt={2} pb={2} borderRadius="lg" borderColor="green">
+              <Box borderWidth='2px' w={80} mr={10}  textAlign="left" pl={4} pt={2} pb={2} borderRadius="lg" borderColor="grey.200" _hover={{ borderColor: "green.300", color: " black" }}>
               <Radio size="md" name="1"  value='2'colorScheme="green">
               21-50 employees
               </Radio>
@@ -88,12 +90,12 @@ const Employees = ({ prevStep, nextStep, handleChange, values }) => {
               </Stack>
 
               <Stack  direction={['row']} mb={4}>
-              <Box  borderWidth='1px' w={80} mr={10} textAlign="left" pl={4} pt={2} pb={2} borderRadius="lg" borderColor="green">
+              <Box  borderWidth='2px' w={80} mr={10}  textAlign="left" pl={4} pt={2} pb={2} borderRadius="lg" borderColor="grey.200" _hover={{ borderColor: "green.300", color: " black" }}>
               <Radio size="md" name="1" value='3' colorScheme="green">
               51-100 employees
               </Radio>
              </Box>
-             <Box  borderWidth='1px' w={80} mr={10} textAlign="left" pl={4} pt={2} pb={2} borderRadius="lg" borderColor="green">
+             <Box  borderWidth='2px' w={80} mr={10}  textAlign="left" pl={4} pt={2} pb={2} borderRadius="lg" borderColor="grey.200" _hover={{ borderColor: "green.300", color: " black" }}>
               <Radio size="md" name="1" value='4' colorScheme="green">
               101-200 employees
               </Radio>
@@ -101,12 +103,12 @@ const Employees = ({ prevStep, nextStep, handleChange, values }) => {
                </Stack>
 
             <Stack  direction={['row']} mb={4}>
-            <Box  borderWidth='1px' w={80} mr={10} textAlign="left" pl={4} pt={2} pb={2} borderRadius="lg" borderColor="green">
+            <Box  borderWidth='2px' w={80} mr={10}  textAlign="left" pl={4} pt={2} pb={2} borderRadius="lg" borderColor="grey.200" _hover={{ borderColor: "green.300", color: " black" }}>
               <Radio size="md" name="1"  value='5'colorScheme="green">
               201-500 employees
               </Radio>
               </Box>
-              <Box  borderWidth='1px' w={80} mr={10} textAlign="left" pl={4} pt={2} pb={2} borderRadius="lg" borderColor="green">
+              <Box  borderWidth='2px' w={80} mr={10}  textAlign="left" pl={4} pt={2} pb={2} borderRadius="lg" borderColor="grey.200" _hover={{ borderColor: "green.300", color: " black" }}>
               <Radio size="md" name="1" value='6' colorScheme="green">
               501-1000 employees
               </Radio>
@@ -115,12 +117,12 @@ const Employees = ({ prevStep, nextStep, handleChange, values }) => {
 
 
               <Stack  direction={['row']} mb={4}>
-              <Box  borderWidth='1px' w={80} mr={10} textAlign="left" pl={4} pt={2} pb={2} borderRadius="lg" borderColor="green">
+              <Box  borderWidth='2px' w={80} mr={10}  textAlign="left" pl={4} pt={2} pb={2} borderRadius="lg" borderColor="grey.200" _hover={{ borderColor: "green.300", color: " black" }}>
               <Radio size="md" name="1" value='7' colorScheme="green">
               1000+ employees
               </Radio>
               </Box>
-              <Box  borderWidth='1px' w={80} mr={10} textAlign="left" pl={4} pt={2} pb={2} borderRadius="lg" borderColor="green">
+              <Box  borderWidth='2px' w={80} mr={10}  textAlign="left" pl={4} pt={2} pb={2} borderRadius="lg" borderColor="grey.200" _hover={{ borderColor: "green.300", color: " black" }}>
               <Radio size="md" name="1"  value='8'colorScheme="green">
               It's just me
               </Radio>
@@ -135,7 +137,7 @@ const Employees = ({ prevStep, nextStep, handleChange, values }) => {
                 type="submit"
                 colorScheme="green"
                 onClick={Previous}
-                mr={150}
+                mr={['50','120','150','150','150','150']}
               >
                 Previous
               </Button>
@@ -146,7 +148,7 @@ const Employees = ({ prevStep, nextStep, handleChange, values }) => {
                 type="submit"
                 colorScheme="green"
                 onClick={Continue}
-                ml={180}
+                ml={['50','120','150','150','150','150']}
               >
                 Next
               </Button>
