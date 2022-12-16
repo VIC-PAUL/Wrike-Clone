@@ -37,7 +37,16 @@ const Dashboard = () => {
       <div>
         <div className={style.compoent1}>
           <div>
-            <h3> All features</h3>
+            <h3>
+              {" "}
+              <Icon
+                as={BsArrowLeftShort}
+                fontSize="1.9rem"
+                marginRight={"1px"}
+                paddingTop="4px"
+              />
+              All features{" "}
+            </h3>
           </div>
 
           <div className={style.compoent1_2}>
@@ -56,11 +65,11 @@ const Dashboard = () => {
 
           <div className={style.compoent1_4}>
             <FormControl isRequired style={{ width: "22rem" }}>
-              <Input placeholder="First name" size="lg" />
+              <Input placeholder="Enter your business email" size="lg" />
             </FormControl>
 
             <Button colorScheme="teal" size="lg">
-              Button
+              Get Started
             </Button>
           </div>
 
@@ -404,6 +413,307 @@ const Dashboard = () => {
                 <Icon as={BsArrowRightShort} mt={"0.8rem"} ml={"0.8rem"} />
               </h3>
             </div>
+          </div>
+        </div>
+
+        <div className={style.compoent8_heading}>
+          <h1>Hit the ground running with our pre-built templates</h1>
+        </div>
+
+        <div className={style.compoent8}>
+          <div>
+            <div className={style.compoent8_img}>
+              <img
+                src="https://web-static.wrike.com/cdn-cgi/image/format=auto,quality=80,width=297,dpr=2/tp/storage/uploads/6d1a2f11-9e35-4e96-b3b7-ed488fc50c58/rebrand-cover-templates-project-performance-2x.png"
+                alt="dev"
+              />
+            </div>
+            <p>PROJECT MANAGEMENT</p>
+            <h1>Prject Performance Template</h1>
+            <p>
+              Use Wrike’s project management dashboard to get a detailed
+              overview of progress at an individual, team, and department level
+              with a shareable project status dashboard.
+            </p>
+          </div>
+
+          <div>
+            <div className={style.compoent8_img}>
+              <img
+                src="https://web-static.wrike.com/cdn-cgi/image/format=auto,quality=80,width=297,dpr=2/tp/storage/uploads/6d1a2f11-9e35-4e96-b3b7-ed488fc50c58/rebrand-cover-templates-project-performance-2x.png"
+                alt="dev"
+              />
+            </div>
+            <p>PROJECT MANAGEMENT</p>
+            <h1>Prject Performance Template</h1>
+            <p>
+              Use Wrike’s project management dashboard to get a detailed
+              overview of progress at an individual, team, and department level
+              with a shareable project status dashboard.
+            </p>
+          </div>
+
+          <div>
+            <div className={style.compoent8_img}>
+              <img
+                src="https://web-static.wrike.com/cdn-cgi/image/format=auto,quality=80,width=297,dpr=2/tp/storage/uploads/6d1a2f11-9e35-4e96-b3b7-ed488fc50c58/rebrand-cover-templates-project-performance-2x.png"
+                alt="dev"
+              />
+            </div>
+            <p>PROJECT MANAGEMENT</p>
+            <h1>Prject Performance Template</h1>
+            <p>
+              Use Wrike’s project management dashboard to get a detailed
+              overview of progress at an individual, team, and department level
+              with a shareable project status dashboard.
+            </p>
+          </div>
+        </div>
+
+        <div className={style.compoent9}>
+          <div className={style.compoent9_1}>
+            <h1>Combine project dashboards with these robust features</h1>
+            <p>
+              Project dashboards are just one part of Wrike’s powerful features.
+              Collaborate seamlessly, improve time management, and visualize
+              projects to achieve results with Wrike.
+            </p>
+          </div>
+
+          <div className={style.compoent9_2}>
+            <div>
+              <p>FEATURE</p>
+              <h1>Improve time management</h1>
+              <p>
+                Wrie's time tracking software enables teams to improve their
+                planning and resourse management and focus on billable
+                work.Input houres manually or use our handy time tracker
+              </p>
+              <h2>
+                Read more
+                <Icon as={BsArrowRightShort} p="10px" />
+              </h2>
+            </div>
+
+            <div>
+              <p>FEATURE</p>
+              <h1>Improve time management</h1>
+              <p>
+                Wrie's time tracking software enables teams to improve their
+                planning and resourse management and focus on billable
+                work.Input houres manually or use our handy time tracker
+              </p>
+              <h2>
+                Read more
+                <Icon as={BsArrowRightShort} p="10px" />
+              </h2>
+            </div>
+
+            <div>
+              <p>FEATURE</p>
+              <h1>Improve time management</h1>
+              <p>
+                Wrie's time tracking software enables teams to improve their
+                planning and resourse management and focus on billable
+                work.Input houres manually or use our handy time tracker
+              </p>
+              <h2>
+                Read more
+                <Icon as={BsArrowRightShort} p="10px" />
+              </h2>
+            </div>
+          </div>
+
+          <div className={style.compoent9_3}>
+            <h1>
+              See All Fetures
+              <Icon
+                as={BsArrowRightShort}
+                mt={"20px"}
+                ml={"1rem"}
+                paddingTop="rem"
+                border={"1px solid black"}
+              />
+            </h1>
+          </div>
+        </div>
+
+        <div className={style.compoent10}>
+          <div>
+            <img
+              src="https://web-static.wrike.com/cdn-cgi/image/format=auto,quality=80,width=432,dpr=2/tp/storage/uploads/0abf3e11-2ba9-49e1-97e8-6f1a107a9039/cta-backgrounds-updated-1.png"
+              alt=""
+            />
+          </div>
+
+          <div className={style.Component10_Secound_Div}>
+            <h1>Project dashboards favored by 2.3 million</h1>
+
+            <h2>Unlock better results with project dashboards</h2>
+
+            <div className={style.compoent10_input_Main_div}>
+              <input placeholder="Enter your business email  " />
+              <button colorScheme="teal" size="lg">
+                Start Free Trial
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <img
+              src="https://web-static.wrike.com/cdn-cgi/image/format=auto,quality=80,width=432,dpr=2/tp/storage/uploads/743aff5a-1853-4425-9d1c-ebe8deb33427/cta-backgrounds-updated.png"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div className={style.compoent11}>
+          <div>
+            <Accordion>
+              <AccordionItem className={style.compoent11_1}>
+                <h2>
+                  <AccordionButton>
+                    <Box
+                      as="span"
+                      flex="1"
+                      textAlign="left"
+                      fontweight="bold"
+                      fontSize={"18px"}
+                    >
+                      How do you create a project dashboard?
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel
+                  as="p"
+                  pb={4}
+                  className={style.compoent11_2}
+                  textAlign="left"
+                >
+                  Wrike’s dashboard tool is incredibly user-friendly. There are
+                  several pre-built widgets you can insert into your dashboard,
+                  separated into work, personal, and project categories. If you
+                  want to personalize your widgets further to show specific
+                  tasks, you can easily create a custom widget. You can include
+                  tasks from multiple folders and add filters to ensure your
+                  widget shows exactly which tasks you need to see. You can even
+                  choose to show the names of the folders on the tasks. This is
+                  especially helpful if you're showing tasks from folders that
+                  relate to different users or even clients.
+                </AccordionPanel>
+              </AccordionItem>
+
+              <AccordionItem className={style.compoent11_1}>
+                <h2>
+                  <AccordionButton>
+                    <Box
+                      as="span"
+                      flex="1"
+                      textAlign="left"
+                      fontweight="bold"
+                      fontSize={"18px"}
+                    >
+                      What is a project management dashboard?
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel
+                  as="p"
+                  pb={4}
+                  className={style.compoent11_2}
+                  textAlign="left"
+                >
+                  A project dashboard is a data center that contains detailed
+                  KPIs on tracked projects. It shows metrics like overall
+                  progress and highlights problematic areas.
+                </AccordionPanel>
+              </AccordionItem>
+
+              <AccordionItem className={style.compoent11_1}>
+                <h2>
+                  <AccordionButton>
+                    <Box
+                      as="span"
+                      flex="1"
+                      textAlign="left"
+                      fontweight="bold"
+                      fontSize={"18px"}
+                    >
+                      What should be included in a project management dashboard?
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel
+                  as="p"
+                  pb={4}
+                  className={style.compoent11_2}
+                  textAlign="left"
+                >
+                  A project dashboard should ideally contain the following
+                  features: an activity tracker, an area for progress reports
+                  and status, an area to track milestones, a personal to-do
+                  list, a task status tracker, a team workload monitor, and a
+                  resource allocation widget.
+                </AccordionPanel>
+              </AccordionItem>
+
+              <AccordionItem className={style.compoent11_1}>
+                <h2>
+                  <AccordionButton>
+                    <Box
+                      as="span"
+                      flex="1"
+                      textAlign="left"
+                      fontweight="bold"
+                      fontSize={"18px"}
+                    >
+                      How do Wrike’s dashboards help with reporting?
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel
+                  as="p"
+                  pb={4}
+                  className={style.compoent11_2}
+                  textAlign="left"
+                >
+                  All teams on every Wrike paid plan can view Wrike’s project
+                  dashboards when you start a free trial.
+                </AccordionPanel>
+              </AccordionItem>
+
+              <AccordionItem className={style.compoent11_1}>
+                <h2>
+                  <AccordionButton>
+                    <Box
+                      as="span"
+                      flex="1"
+                      textAlign="left"
+                      fontweight="bold"
+                      fontSize={"18px"}
+                    >
+                      Section 1 title
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel
+                  as="p"
+                  pb={4}
+                  className={style.compoent11_2}
+                  textAlign="left"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </div>
