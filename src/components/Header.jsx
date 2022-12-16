@@ -148,6 +148,7 @@ const Header = () => {
             height={"100%"}
             width={"20%"}
             src={logo}
+            mr={"0.5rem"}
           />
           {/* <Text 
         className='text-2xl font-semibold absolute left-12 top-3'
@@ -179,14 +180,15 @@ const Header = () => {
               Why ProFlo
             </MenuButton>
             <MenuList
-              
               style={{
                 width: "100vw",
-                height:"fit-content",
+                // position:"absolute",
+                // left:"0",
+                height: "fit-content",
                 border: "1px solid #181f38",
-                color:"black",
-                backgroundColor:"#181f38",
-                marginTop:"10px"
+                color: "black",
+                backgroundColor: "#181f38",
+                marginTop: "10px",
               }}
             >
               <motion.div
@@ -200,109 +202,355 @@ const Header = () => {
               // }}
               // transition={{duration:2}}
               >
-                <MenuItem style={{ width:"100%", display:"flex row",}}
-                gap={14}
+                <MenuItem
+                  style={{ width: "100%", display: "flex row" }}
+                  gap={14}
                 >
-                <div style={{ width:"23%", marginTop:"30px",marginLeft:"80px"}}>
-                  <h6 style={{textTransform:"uppercase",color:"gray",fontSize:"14px", fontWeight:"bold",marginBottom:"20px"}} >For Teams</h6>
-                 
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-marketing.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Marketing</h1>
-                    <p style={{fontSize:"16px", }}>Streamline proofing and reporting for seamless campaigns.</p>
+                  <div
+                    style={{
+                      width: "23%",
+                      marginTop: "30px",
+                      marginLeft: "80px",
+                    }}
+                  >
+                    <h6
+                      style={{
+                        textTransform: "uppercase",
+                        color: "gray",
+                        fontSize: "14px",
+                        fontWeight: "bold",
+                        marginBottom: "20px",
+                      }}
+                    >
+                      For Teams
+                    </h6>
+
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-marketing.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>Marketing</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Streamline proofing and reporting for seamless
+                          campaigns.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-case.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Professional Services</h1>
-                    <p style={{fontSize:"16px", }}>Take control of billable hours and increase client satisfaction.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-case.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>
+                          Professional Services
+                        </h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Take control of billable hours and increase client
+                          satisfaction.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-project-1.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Project Managers</h1>
-                    <p style={{fontSize:"16px", }}>Plan Agile projects, track deadlines, and deliver results.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-project-1.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>Project Managers</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Plan Agile projects, track deadlines, and deliver
+                          results.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-palette.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Creative & Design</h1>
-                    <p style={{fontSize:"16px", }}>Create high-quality assets and get them approved in record time.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-palette.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>
+                          Creative & Design
+                        </h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Create high-quality assets and get them approved in
+                          record time.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                </div>
-                <div style={{ width:"23%", marginTop:"30px",marginLeft:"80px"}}>
-                  <h6 style={{textTransform:"uppercase",color:"gray",fontSize:"14px", fontWeight:"bold",marginBottom:"20px"}} >Use cases</h6>
-                 
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-dependency.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Workflow Management</h1>
-                    <p style={{fontSize:"16px", }}>Use custom statuses and automate your team workflows.</p>
+                  </div>
+                  <div
+                    style={{
+                      width: "23%",
+                      marginTop: "30px",
+                      marginLeft: "80px",
+                    }}
+                  >
+                    <h6
+                      style={{
+                        textTransform: "uppercase",
+                        color: "gray",
+                        fontSize: "14px",
+                        fontWeight: "bold",
+                        marginBottom: "20px",
+                      }}
+                    >
+                      Use cases
+                    </h6>
+
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-dependency.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>
+                          Workflow Management
+                        </h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Use custom statuses and automate your team workflows.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-board.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Task Management</h1>
-                    <p style={{fontSize:"16px", }}>Organize incoming requests and eliminate repetitive tasks.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-board.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>Task Management</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Organize incoming requests and eliminate repetitive
+                          tasks.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-pie-chart.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Project Tracking</h1>
-                    <p style={{fontSize:"16px", }}>Track progress and monitor multiple projects with dashboards.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-pie-chart.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>Project Tracking</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Track progress and monitor multiple projects with
+                          dashboards.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-folder.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Resource Management</h1>
-                    <p style={{fontSize:"16px", }}>View team workloads and reallocate tasks to avoid burnout.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-folder.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>
+                          Resource Management
+                        </h1>
+                        <p style={{ fontSize: "16px" }}>
+                          View team workloads and reallocate tasks to avoid
+                          burnout.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                </div>
-                <div style={{ width:"23%", marginTop:"30px",marginLeft:"80px"}}>
-                  <h6 style={{textTransform:"uppercase",color:"gray",fontSize:"14px", fontWeight:"bold",marginBottom:"20px"}}>APPS & INTEGRATIONS</h6>
-                 
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-inregration-slack.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Slack</h1>
-                    <p style={{fontSize:"16px", }}>Turn a casual Slack chat into an actionable Wrike task.</p>
+                  </div>
+                  <div
+                    style={{
+                      width: "23%",
+                      marginTop: "30px",
+                      marginLeft: "80px",
+                    }}
+                  >
+                    <h6
+                      style={{
+                        textTransform: "uppercase",
+                        color: "gray",
+                        fontSize: "14px",
+                        fontWeight: "bold",
+                        marginBottom: "20px",
+                      }}
+                    >
+                      APPS & INTEGRATIONS
+                    </h6>
+
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-inregration-slack.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>Slack</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Turn a casual Slack chat into an actionable Wrike
+                          task.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-inregration-salesforce.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Salesforce</h1>
-                    <p style={{fontSize:"16px", }}>Integrate client data seamlessly between Wrike and Salesforce.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-inregration-salesforce.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>Salesforce</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Integrate client data seamlessly between Wrike and
+                          Salesforce.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-inregration-microsoft-teams.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}> Microsoft Teams</h1>
-                    <p style={{fontSize:"16px", }}>Collaborate on Wrike projects without leaving Microsoft Teams.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-inregration-microsoft-teams.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}> Microsoft Teams</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Collaborate on Wrike projects without leaving
+                          Microsoft Teams.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-inregration-adobe.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Adobe</h1>
-                    <p style={{fontSize:"16px", }}>Accelerate Wrike design tasks from Adobe Creative Cloud.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab1-inregration-adobe.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>Adobe</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Accelerate Wrike design tasks from Adobe Creative
+                          Cloud.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                </div>
+                  </div>
                 </MenuItem>
-                <MenuItem>
-                
-                </MenuItem>
+                <MenuItem></MenuItem>
                 {/* <MenuItem onClick={() => console.log("hi")}>Download</MenuItem>
                 <MenuItem>Create a Copy</MenuItem>
                 <MenuItem>Mark as Draft</MenuItem>
@@ -311,7 +559,7 @@ const Header = () => {
               </motion.div>
             </MenuList>
           </Menu>
-          
+
           {/* <Menu className="">
             <MenuButton
               // className=" rounded-md hover:backdrop-blur-sm hover:bg-white/10 h-10 w-28 p-2"
@@ -335,14 +583,13 @@ const Header = () => {
               Features
             </MenuButton>
             <MenuList
-              
               style={{
                 width: "100vw",
-                height:"fit-content",
+                height: "fit-content",
                 border: "1px solid #181f38",
-                color:"black",
-                backgroundColor:"#181f38",
-                marginTop:"10px"
+                color: "black",
+                backgroundColor: "#181f38",
+                marginTop: "10px",
               }}
             >
               <motion.div
@@ -356,109 +603,346 @@ const Header = () => {
               // }}
               // transition={{duration:2}}
               >
-                <MenuItem style={{ width:"100%", display:"flex row",}}
-                gap={14}
+                <MenuItem
+                  style={{ width: "100%", display: "flex row" }}
+                  gap={14}
                 >
-                <div style={{ width:"23%", marginTop:"30px",marginLeft:"80px"}}>
-                  <h6 style={{textTransform:"uppercase",color:"gray",fontSize:"14px", fontWeight:"bold",marginBottom:"20px"}} >For Teams</h6>
-                 
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-dashboard.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Dashboards</h1>
-                    <p style={{fontSize:"16px", }}>Visualize tasks, processes, analytics, and more.</p>
+                  <div
+                    style={{
+                      width: "23%",
+                      marginTop: "30px",
+                      marginLeft: "80px",
+                    }}
+                  >
+                    <h6
+                      style={{
+                        textTransform: "uppercase",
+                        color: "gray",
+                        fontSize: "14px",
+                        fontWeight: "bold",
+                        marginBottom: "20px",
+                      }}
+                    >
+                      For Teams
+                    </h6>
+
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-dashboard.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>Dashboards</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Visualize tasks, processes, analytics, and more.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-speech.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Proofing</h1>
-                    <p style={{fontSize:"16px", }}>Streamlined proofing and collaboration in one place.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-speech.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>Proofing</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Streamlined proofing and collaboration in one place.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-user-group.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Project Resource Planning</h1>
-                    <p style={{fontSize:"16px", }}>Plan and allocate resources for timely delivery.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-user-group.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>
+                          Project Resource Planning
+                        </h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Plan and allocate resources for timely delivery.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-items.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Custom Item Types</h1>
-                    <p style={{fontSize:"16px", }}>Tailor work items to fit your specific workplace.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-items.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>
+                          Custom Item Types
+                        </h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Tailor work items to fit your specific workplace.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                </div>
-                <div style={{ width:"23%", marginTop:"30px",marginLeft:"80px"}}>
-                  <h6 style={{textTransform:"uppercase",color:"gray",fontSize:"14px", fontWeight:"bold",marginBottom:"20px"}} >Use cases</h6>
-                 
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab3-settings.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Automation</h1>
-                    <p style={{fontSize:"16px", }}>Define and trigger automated workflows to eliminate manual efforts.</p>
+                  </div>
+                  <div
+                    style={{
+                      width: "23%",
+                      marginTop: "30px",
+                      marginLeft: "80px",
+                    }}
+                  >
+                    <h6
+                      style={{
+                        textTransform: "uppercase",
+                        color: "gray",
+                        fontSize: "14px",
+                        fontWeight: "bold",
+                        marginBottom: "20px",
+                      }}
+                    >
+                      Use cases
+                    </h6>
+
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab3-settings.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>Automation</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Define and trigger automated workflows to eliminate
+                          manual efforts.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-subtasks.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Cross-Tagging</h1>
-                    <p style={{fontSize:"16px", }}>Unparalleled visibility across multiple work streams.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-subtasks.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>Cross-Tagging</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Unparalleled visibility across multiple work streams.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-dependency.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Gantt Charts</h1>
-                    <p style={{fontSize:"16px", }}>Interactive project scheduling across teams.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-dependency.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>Gantt Charts</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Interactive project scheduling across teams.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-form.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Dynamic Request Forms</h1>
-                    <p style={{fontSize:"16px", }}>Custom forms powered by conditional logic.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-form.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>
+                          Dynamic Request Forms
+                        </h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Custom forms powered by conditional logic.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                </div>
-                <div style={{ width:"23%", marginTop:"30px",marginLeft:"80px"}}>
-                  <h6 style={{textTransform:"uppercase",color:"gray",fontSize:"14px", fontWeight:"bold",marginBottom:"20px"}}>APPS & INTEGRATIONS</h6>
-                 
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-mobile.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Mobile & Desktop Apps</h1>
-                    <p style={{fontSize:"16px", }}>Work from anywhere with our robust app experience.</p>
+                  </div>
+                  <div
+                    style={{
+                      width: "23%",
+                      marginTop: "30px",
+                      marginLeft: "80px",
+                    }}
+                  >
+                    <h6
+                      style={{
+                        textTransform: "uppercase",
+                        color: "gray",
+                        fontSize: "14px",
+                        fontWeight: "bold",
+                        marginBottom: "20px",
+                      }}
+                    >
+                      APPS & INTEGRATIONS
+                    </h6>
+
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-mobile.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>
+                          Mobile & Desktop Apps
+                        </h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Work from anywhere with our robust app experience.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-board.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}> Kanban Boards</h1>
-                    <p style={{fontSize:"16px", }}>Instantly view project progress and create customized workflows.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-board.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}> Kanban Boards</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Instantly view project progress and create customized
+                          workflows.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-check-circle.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}> Approvals</h1>
-                    <p style={{fontSize:"16px", }}>Keep approvers in the loop from start to finish.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-check-circle.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}> Approvals</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Keep approvers in the loop from start to finish.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-intersection.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Integrations</h1>
-                    <p style={{fontSize:"16px", }}>Over 400 popular apps plus custom integrations.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-intersection.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>Integrations</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Over 400 popular apps plus custom integrations.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                </div>
+                  </div>
                 </MenuItem>
-                <MenuItem>
-                
-                </MenuItem>
+                <MenuItem></MenuItem>
                 {/* <MenuItem onClick={() => console.log("hi")}>Download</MenuItem>
                 <MenuItem>Create a Copy</MenuItem>
                 <MenuItem>Mark as Draft</MenuItem>
@@ -472,14 +956,13 @@ const Header = () => {
               Resources
             </MenuButton>
             <MenuList
-              
               style={{
                 width: "100vw",
-                height:"fit-content",
+                height: "fit-content",
                 border: "1px solid #181f38",
-                color:"black",
-                backgroundColor:"#181f38",
-                marginTop:"10px"
+                color: "black",
+                backgroundColor: "#181f38",
+                marginTop: "10px",
               }}
             >
               <motion.div
@@ -493,109 +976,346 @@ const Header = () => {
               // }}
               // transition={{duration:2}}
               >
-                <MenuItem style={{ width:"100%", display:"flex row",}}
-                gap={14}
+                <MenuItem
+                  style={{ width: "100%", display: "flex row" }}
+                  gap={14}
                 >
-                <div style={{ width:"23%", marginTop:"30px",marginLeft:"80px"}}>
-                  <h6 style={{textTransform:"uppercase",color:"gray",fontSize:"14px", fontWeight:"bold",marginBottom:"20px"}} >For Teams</h6>
-                 
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-dashboard.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Dashboards</h1>
-                    <p style={{fontSize:"16px", }}>Visualize tasks, processes, analytics, and more.</p>
+                  <div
+                    style={{
+                      width: "23%",
+                      marginTop: "30px",
+                      marginLeft: "80px",
+                    }}
+                  >
+                    <h6
+                      style={{
+                        textTransform: "uppercase",
+                        color: "gray",
+                        fontSize: "14px",
+                        fontWeight: "bold",
+                        marginBottom: "20px",
+                      }}
+                    >
+                      For Teams
+                    </h6>
+
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-dashboard.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>Dashboards</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Visualize tasks, processes, analytics, and more.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-speech.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Proofing</h1>
-                    <p style={{fontSize:"16px", }}>Streamlined proofing and collaboration in one place.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-speech.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>Proofing</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Streamlined proofing and collaboration in one place.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-user-group.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Project Resource Planning</h1>
-                    <p style={{fontSize:"16px", }}>Plan and allocate resources for timely delivery.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-user-group.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>
+                          Project Resource Planning
+                        </h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Plan and allocate resources for timely delivery.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-items.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Custom Item Types</h1>
-                    <p style={{fontSize:"16px", }}>Tailor work items to fit your specific workplace.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-items.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>
+                          Custom Item Types
+                        </h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Tailor work items to fit your specific workplace.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                </div>
-                <div style={{ width:"23%", marginTop:"30px",marginLeft:"80px"}}>
-                  <h6 style={{textTransform:"uppercase",color:"gray",fontSize:"14px", fontWeight:"bold",marginBottom:"20px"}} >Use cases</h6>
-                 
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab3-settings.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Automation</h1>
-                    <p style={{fontSize:"16px", }}>Define and trigger automated workflows to eliminate manual efforts.</p>
+                  </div>
+                  <div
+                    style={{
+                      width: "23%",
+                      marginTop: "30px",
+                      marginLeft: "80px",
+                    }}
+                  >
+                    <h6
+                      style={{
+                        textTransform: "uppercase",
+                        color: "gray",
+                        fontSize: "14px",
+                        fontWeight: "bold",
+                        marginBottom: "20px",
+                      }}
+                    >
+                      Use cases
+                    </h6>
+
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab3-settings.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>Automation</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Define and trigger automated workflows to eliminate
+                          manual efforts.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-subtasks.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Cross-Tagging</h1>
-                    <p style={{fontSize:"16px", }}>Unparalleled visibility across multiple work streams.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-subtasks.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>Cross-Tagging</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Unparalleled visibility across multiple work streams.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-dependency.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Gantt Charts</h1>
-                    <p style={{fontSize:"16px", }}>Interactive project scheduling across teams.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-dependency.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>Gantt Charts</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Interactive project scheduling across teams.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-form.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Dynamic Request Forms</h1>
-                    <p style={{fontSize:"16px", }}>Custom forms powered by conditional logic.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-form.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>
+                          Dynamic Request Forms
+                        </h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Custom forms powered by conditional logic.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                </div>
-                <div style={{ width:"23%", marginTop:"30px",marginLeft:"80px"}}>
-                  <h6 style={{textTransform:"uppercase",color:"gray",fontSize:"14px", fontWeight:"bold",marginBottom:"20px"}}>APPS & INTEGRATIONS</h6>
-                 
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-mobile.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Mobile & Desktop Apps</h1>
-                    <p style={{fontSize:"16px", }}>Work from anywhere with our robust app experience.</p>
+                  </div>
+                  <div
+                    style={{
+                      width: "23%",
+                      marginTop: "30px",
+                      marginLeft: "80px",
+                    }}
+                  >
+                    <h6
+                      style={{
+                        textTransform: "uppercase",
+                        color: "gray",
+                        fontSize: "14px",
+                        fontWeight: "bold",
+                        marginBottom: "20px",
+                      }}
+                    >
+                      APPS & INTEGRATIONS
+                    </h6>
+
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-mobile.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>
+                          Mobile & Desktop Apps
+                        </h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Work from anywhere with our robust app experience.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-board.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}> Kanban Boards</h1>
-                    <p style={{fontSize:"16px", }}>Instantly view project progress and create customized workflows.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-board.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}> Kanban Boards</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Instantly view project progress and create customized
+                          workflows.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-check-circle.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}> Approvals</h1>
-                    <p style={{fontSize:"16px", }}>Keep approvers in the loop from start to finish.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-check-circle.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}> Approvals</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Keep approvers in the loop from start to finish.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box style={{color:"white",display:"flex",position:"relative",marginBottom:"20px"}} gap={5} _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }} className={style.menuDiv}>
-                    <Image style={{}} src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-intersection.svg" />
-                    <Box>
-                      <h1 style={{fontWeight:"bold"}}>Integrations</h1>
-                    <p style={{fontSize:"16px", }}>Over 400 popular apps plus custom integrations.</p>
+                    <Box
+                      style={{
+                        color: "white",
+                        display: "flex",
+                        position: "relative",
+                        marginBottom: "20px",
+                      }}
+                      gap={5}
+                      _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                      className={style.menuDiv}
+                    >
+                      <Image
+                        style={{}}
+                        src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-intersection.svg"
+                      />
+                      <Box>
+                        <h1 style={{ fontWeight: "bold" }}>Integrations</h1>
+                        <p style={{ fontSize: "16px" }}>
+                          Over 400 popular apps plus custom integrations.
+                        </p>
+                      </Box>
                     </Box>
-                  </Box>
-                </div>
+                  </div>
                 </MenuItem>
-                <MenuItem>
-                
-                </MenuItem>
+                <MenuItem></MenuItem>
                 {/* <MenuItem onClick={() => console.log("hi")}>Download</MenuItem>
                 <MenuItem>Create a Copy</MenuItem>
                 <MenuItem>Mark as Draft</MenuItem>
@@ -604,7 +1324,7 @@ const Header = () => {
               </motion.div>
             </MenuList>
           </Menu>
-          <Button 
+          <Button
           // className=" rounded-md hover:backdrop-blur-sm hover:bg-white/10 h-10 w-20 p-2"
           >
             Pricing

@@ -1,9 +1,12 @@
 .firstBox{
-    height: 550px;
+    height: fit-content;
     background-color: #181f38;
     color: white;
-}
-.firstFBox{
     font-size: 18px;
-    /* width: 40%; */
+}
+/* .firstFBox{
+    width: 40%;
+} */
+.flex1{
+    cursor: pointer;
 }
