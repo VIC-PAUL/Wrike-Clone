@@ -17,6 +17,7 @@ import {
 } from "@chakra-ui/react";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 
+
 const Dashboard = () => {
   const videoEl = useRef(null);
 
