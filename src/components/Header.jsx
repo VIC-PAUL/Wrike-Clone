@@ -53,7 +53,7 @@ const Header = () => {
         width={"87%"}
         pt={"0.5rem"}
         pb={"0.5rem"}
-        border={"1px solid cyan"}
+        // border={"1px solid cyan"}
         margin={"auto"}
         alignItems={"center"}
 
@@ -91,7 +91,7 @@ const Header = () => {
           <MdMenu />
         </Box>
         <Drawer
-          size={"md"}
+          size={{base:"full",md:"sm"}}
           isOpen={isOpen}
           placement="right"
           onClose={onClose}
@@ -100,9 +100,10 @@ const Header = () => {
           <DrawerOverlay />
           <DrawerContent
           // className="bg-red-500 w-[300px]"
+          bgColor={"#181f38"} color={"white"}
           >
             <DrawerCloseButton />
-            <DrawerHeader>Create your account</DrawerHeader>
+            <DrawerHeader><Image src={logo } /></DrawerHeader>
 
             <DrawerBody>
               <Input placeholder="Type here..." />

@@ -1,15 +1,13 @@
 import {
   Box,
   Button,
-  Center,
-  Grid,
   Image,
-  Input,
   SimpleGrid,
   Stack,
   Text,
   Flex,
 } from "@chakra-ui/react";
+import { SocialIcon } from "react-social-icons";
 import React from "react";
 import style from "./ContentHomePage.module.css";
 import HomepageTop from "../Images/HomepageTop.png";
@@ -17,7 +15,7 @@ import HomepageTop from "../Images/HomepageTop.png";
 const ContentHomePage = () => {
   return (
     <div>
-      <Stack width={"100%"}>
+      <Stack width={"100%"} direction={"column"} gap={0}>
         <Box
           // position={"relative"}
           className={style.firstBox}
@@ -27,6 +25,7 @@ const ContentHomePage = () => {
           paddingRight={{ base: "15%", lg: "5%", xl: "8%" }}
           textAlign={{ base: "center", lg: "left" }}
           justifyContent={"space-between"}
+          borderRadius="0% 100% 0% 100% / 98% 10% 90% 2%   "
           // border={"1px solid red"}
         >
           <Box
@@ -82,8 +81,8 @@ const ContentHomePage = () => {
             <Image
               width={"100%"}
               // position={"absolute"}
-              right={{ base: "10%", lg: "0" }}
-              left={{ base: "10%", lg: "50%" }}
+              // right={{ base: "10%", lg: "0" }}
+              // left={{ base: "10%", lg: "50%" }}
               height={"100%"}
               src={HomepageTop}
             />
@@ -358,6 +357,7 @@ const ContentHomePage = () => {
             fontWeight={"bold"}
             fontSize="18px"
             pt={10}
+            _hover={{cursor: "pointer"}}
           >
             See all teams -&#62;
           </Text>
@@ -373,7 +373,10 @@ const ContentHomePage = () => {
             </Button>
           </Flex>
         </Box>
-        <Box backgroundColor="#181f38">
+        <Box
+          backgroundColor="#181f38"
+          borderRadius={{ base: "0", lg: "0% 100% 0% 100% / 95% 10% 90% 5%  " }}
+        >
           <Flex
             direction={{ base: "column", lg: "row" }}
             height={{ base: "fit-content", lg: "500px" }}
@@ -436,6 +439,221 @@ const ContentHomePage = () => {
             </Box>
           </Flex>
         </Box>
+        <Box
+          direction={{ base: "row", lg: "column" }}
+          borderRadius={{ base: "0", lg: "0% 100% 0% 100% / 95% 10% 90% 5%  " }}
+          style={{
+            backgroundColor: "#181f38",
+            marginTop: "50px",
+          }}
+        >
+          <Box
+            width={"80%"}
+            // border="1px solid red"
+            style={{ margin: "auto", height: "fit-content" }}
+          >
+            <Box>
+              {/* <Box border={"1px solid cyan"} pt={6} margin={"auto"}> */}
+              <Text
+                width={"60%"}
+                color={"white"}
+                textAlign={"center"}
+                pt={6}
+                margin={"auto"}
+                fontWeight={"bold"}
+                fontSize={{ base: "16px", md: "20px", lg: "25px", xl: "32px" }}
+              >
+                The Most Versatile Work Management Platform™
+              </Text>
+              <Text
+                width={"60%"}
+                color={"white"}
+                textAlign={"center"}
+                pt={6}
+                margin={"auto"}
+                mt={4}
+                fontWeight={"semibold"}
+                fontSize={{ base: "18px" }}
+              >
+                Maximize your team's performance, accelerate growth, and improve
+                customer experience with Wrike's robust and extensive features
+              </Text>
+              {/* </Box> */}
+            </Box>
+            <Flex
+              direction={"row"}
+              // overflow={"scroll"}
+              width={{ base: "100%", md: "80%", lg: "60%" }}
+              gap={4}
+              margin={"auto"}
+              justifyContent={"space-between"}
+              color={"gray.500"}
+              fontSize={"20px"}
+              mt={4}
+            >
+              <Text
+                _hover={{ color: "green.500", cursor: "pointer" }}
+                onClick={() => {
+                  const img = document.getElementById("imageClick");
+                  const text1 = document.getElementById("text1");
+                  const text2 = document.getElementById("text2");
+                  const text3 = document.getElementById("text3");
+                  text1.innerText = "Customizable dashboards";
+                  text2.innerText =
+                    "Never miss a task with personalized dashboards. See what your team is working on in a comprehensive view and share progress across the organization.";
+                  text3.innerText =
+                    "Get a detailed overview of workloads, pin important to-dos, follow important tasks, and choose exactly what you want to see to keep a close eye on progress.";
+                  img.src =
+                    "https://web-static.wrike.com/cdn-cgi/image/format=auto,quality=80,width=728,dpr=2/tp/storage/uploads/ef0e5d1a-124a-4508-80f6-950b3b129a48/rebrand-screenshot-dashboards-resized-2x.png";
+                }}
+              >
+                Dashboard
+              </Text>
+              <Text
+                _hover={{ color: "green.500", cursor: "pointer" }}
+                onClick={() => {
+                  const img = document.getElementById("imageClick");
+                  const text1 = document.getElementById("text1");
+                  const text2 = document.getElementById("text2");
+                  const text3 = document.getElementById("text3");
+                  text1.innerText = "Collaborative cross-tagging";
+                  text2.innerText =
+                    "Cross-tagging allows teams to gain visibility into tasks, folders, milestones, phases, and entire projects across multiple work streams and organizational structures.";
+                  text3.innerText =
+                    "Tasks, folders, and projects can now live in multiple places without being duplicated. This means you spend less time managing documentation, more time creating great work.";
+                  img.src =
+                    "https://web-static.wrike.com/cdn-cgi/image/format=auto,quality=80,width=728,dpr=2/tp/storage/uploads/772ccef9-5cc8-498d-81d3-c4dae398dfb3/product-screenshot-cross-tagging-holiday-campaign.png";
+                }}
+              >
+                Cross-tagging
+              </Text>
+              <Text
+                _hover={{ color: "green.500", cursor: "pointer" }}
+                onClick={() => {
+                  const img = document.getElementById("imageClick");
+                  const text1 = document.getElementById("text1");
+                  const text2 = document.getElementById("text2");
+                  const text3 = document.getElementById("text3");
+                  text1.innerText = "Seamless integrations";
+                  text2.innerText =
+                    "Connect your existing apps and workflows with pre-made integrations available for over 400 popular apps, plus custom integrations for more advanced users.";
+                  text3.innerText =
+                    "Easily integrate apps like Salesforce, Tableau, Dropbox, Microsoft Teams, and others with just a few clicks.";
+                  img.src =
+                    "https://web-static.wrike.com/cdn-cgi/image/format=auto,quality=80,width=728,dpr=2/tp/storage/uploads/ef0e5d1a-124a-4508-80f6-950b3b129a48/rebrand-screenshot-dashboards-resized-2x.png";
+                }}
+              >
+                Integration
+              </Text>
+              <Text
+                _hover={{ color: "green.500", cursor: "pointer" }}
+                onClick={() => {
+                  const img = document.getElementById("imageClick");
+                  const text1 = document.getElementById("text1");
+                  const text2 = document.getElementById("text2");
+                  const text3 = document.getElementById("text3");
+                  text1.innerText = "Streamlined proofing software";
+                  text2.innerText =
+                    "Organize your feedback, files, and approvals all in one place with Wrike’s proofing feature. Automatically notify approvers when documents are ready to view.";
+                  text3.innerText =
+                    "Work with external collaborators and accelerate publishing with DAM integrations. With our proofing capabilities, you can even add comments directly to assets.";
+                  img.src =
+                    "https://web-static.wrike.com/cdn-cgi/image/format=auto,quality=80,width=728,dpr=2/tp/storage/uploads/772ccef9-5cc8-498d-81d3-c4dae398dfb3/product-screenshot-cross-tagging-holiday-campaign.png";
+                }}
+              >
+                Proofing
+              </Text>
+              <Text
+                _hover={{ color: "green.500", cursor: "pointer" }}
+                onClick={() => {
+                  const img = document.getElementById("imageClick");
+                  const text1 = document.getElementById("text1");
+                  const text2 = document.getElementById("text2");
+                  const text3 = document.getElementById("text3");
+                  text1.innerText = "Easy-to-Use Gantt charts";
+                  text2.innerText =
+                    "See the big picture of your project’s progress with a complete view of work scope and dependencies using our industry-leading Gantt charts.";
+                  text3.innerText =
+                    "Control multiple projects from a single platform and update timelines with our seamless drag-and-drop functionality. Collaborate with teams in real time so nobody misses a step.";
+                  img.src =
+                    "https://web-static.wrike.com/cdn-cgi/image/format=auto,quality=80,width=728,dpr=2/tp/storage/uploads/ef0e5d1a-124a-4508-80f6-950b3b129a48/rebrand-screenshot-dashboards-resized-2x.png";
+                }}
+              >
+                Gantt Charts
+              </Text>
+            </Flex>
+            <Flex
+              direction={{ base: "column", lg: "row" }}
+              height={{ base: "fit-content", lg: "500px" }}
+              style={{
+                width: "100%",
+                // border: "1px solid red",
+                margin: "auto",
+                marginBottom: "20px",
+
+                justifyContent: "space-between",
+              }}
+              textAlign={"left"}
+            >
+              <Box width={{ base: "100%", lg: "50%" }} p={20}>
+                <Text
+                  id="text1"
+                  as={"h2"}
+                  fontSize="32px"
+                  fontWeight={"bold"}
+                  color="white"
+                  pb={6}
+                >
+                  Customizable dashboards
+                </Text>
+                <Text
+                  id="text2"
+                  as={"h2"}
+                  fontSize={"18px"}
+                  fontWeight={""}
+                  color="white"
+                  pb={4}
+                >
+                  Never miss a task with personalized dashboards. See what your
+                  team is working on in a comprehensive view and share progress
+                  across the organization.
+                </Text>
+                <Text
+                  id="text3"
+                  as={"h3"}
+                  fontSize={"18px"}
+                  fontWeight={""}
+                  color="white"
+                >
+                  Get a detailed overview of workloads, pin important to-dos,
+                  follow important tasks, and choose exactly what you want to
+                  see to keep a close eye on progress.
+                </Text>
+                <Text
+                  color={"green.400"}
+                  cursor={"pointer"}
+                  pt={10}
+                  fontSize={20}
+                >
+                  Learn More -&#62;
+                </Text>
+              </Box>
+              <Box
+                width={{ base: "100%", lg: "50%" }}
+                height={{ base: "700px", lg: "90%" }}
+                mt={10}
+                // border={"1px solid cyan"}
+              >
+                <Image
+                  width={"100%"}
+                  height={"100%"}
+                  id="imageClick"
+                  src="https://web-static.wrike.com/cdn-cgi/image/format=auto,quality=80,width=728,dpr=2/tp/storage/uploads/ef0e5d1a-124a-4508-80f6-950b3b129a48/rebrand-screenshot-dashboards-resized-2x.png"
+                />
+              </Box>
+            </Flex>
+          </Box>
+        </Box>
         <Box backgroundColor="#ffff">
           <Flex
             direction={{ base: "column", lg: "row" }}
@@ -486,12 +704,213 @@ const ContentHomePage = () => {
                 Learn More -&#62;
               </Text>
             </Box>
-            <Box width={{base:"100%",lg:"60%"}} height={{ base: "700px", lg: "100%" }}>
+            <Box
+              width={{ base: "100%", lg: "60%" }}
+              height={{ base: "700px", lg: "100%" }}
+            >
               <Image
                 width={"100%"}
                 height={"100%"}
                 src="https://web-static.wrike.com/cdn-cgi/image/format=auto,quality=80,width=728,dpr=2/tp/storage/uploads/46b5c5fb-dfa2-4aae-a1d0-3e5c7220944c/rebrand-screenshot-lock-scheme-white.png"
               />
+            </Box>
+          </Flex>
+        </Box>
+        <Box bg={"#181f38"} color={"white"} textAlign={"center"} pt={10}>
+          <Text
+            w={"50%"}
+            margin={"auto"}
+            as={"h1"}
+            fontSize={"40px"}
+            fontWeight={"bold"}
+            pb={5}
+          >
+            Try our powerful work management software for free
+          </Text>
+          <Text
+            w={"50%"}
+            margin={"auto"}
+            as={"h4"}
+            fontSize={"20px"}
+            fontWeight={"semibold"}
+            pb={10}
+          >
+            Sign up for a free two-week trial of Wrike today — no credit card
+            required.{" "}
+          </Text>
+          <Button
+            height={{ base: "60px", lg: "50px" }}
+            bg={"rgb(34 197 94)"}
+            _hover={{ bg: "rgba(34,197,94,0.8)" }}
+            width={{ base: "100%", lg: "30%" }}
+            mb={10}
+          >
+            Get Started
+          </Button>
+        </Box>
+        <Box
+          bg={"#0c3245"}
+          pt={10}
+          pb={10}
+          // border={"1px solid red"}
+          margin={"auto"}
+        >
+          <Flex
+          direction={{base:"column", md:"row"}}
+          alignItems={{base:"center", md:"left"}}
+          fontSize={{base:"larger",md:"large"}}
+          gap={10}
+            style={{
+              width: "80%",
+              margin: "auto",
+              justifyContent: "space-between",
+            }}
+          >
+            <Box className={style.boxFooter}
+            width={{base:"100%", md:"20%"}}
+            // border={"1px solid red"}
+
+            textAlign={{base:"center",md:"left"}}
+            >
+              <Text color={"white"} fontWeight={"bold"} fontSize={"larger"}>
+                Product
+              </Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Product Tour</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Pricing</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Templates</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>App and Integration</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Task Management</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Gantt Charts</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Wrike Status</Text>
+            </Box>
+            <Box className={style.boxFooter} width={{base:"100%", md:"20%"}}
+            // border={"1px solid red"}
+
+            textAlign={{base:"center",md:"left"}}>
+              <Text color={"white"} fontWeight={"bold"} fontSize={"larger"}>
+                Solutions
+              </Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>All Teams</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Marketing</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Creative</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Project Management</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Project Development</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Business Operations</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Professional Service</Text>
+            </Box>
+            <Box className={style.boxFooter} width={{base:"100%", md:"20%"}}
+            // border={"1px solid red"}
+
+            textAlign={{base:"center",md:"left"}}>
+              <Text color={"white"} fontWeight={"bold"} fontSize={"larger"}>
+                Resources
+              </Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Help Center</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Community</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Webinars</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Interactive Training</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Support</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Google project management tools</Text>
+              {/* <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Wrike Status</Text> */}
+            </Box>
+            <Box className={style.boxFooter} width={{base:"100%", md:"20%"}}
+            // border={"1px solid red"}
+
+            textAlign={{base:"center",md:"left"}}>
+              <Text color={"white"} fontWeight={"bold"} fontSize={"larger"}>
+              Company
+              </Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>About Us</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Careers</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Our Customers</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Blog</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Events</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Newsroom</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Partner Program</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>User Conference</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Contact Us</Text>
+            </Box>
+            <Box className={style.boxFooter} width={{base:"100%", md:"20%"}}
+            // border={"1px solid red"}
+
+            textAlign={{base:"center",md:"left"}}>
+              <Text color={"white"} fontWeight={"bold"} fontSize={"larger"}>
+              Guides
+              </Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Project Management Guide</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Kanban Guide</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Go-to-Market Guide</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Remote Work Guide</Text>
+              {/* <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Task Management</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Gantt Charts</Text>
+              <Text className={style.textFooter} width={{base:"100%",md:"20%"}}>Wrike Status</Text> */}
+            </Box>
+          </Flex>
+          {/* <hr width={"80%"} style={{margin:"auto",marginTop:"20px", color:"#04454d"}} /> */}
+          <Flex
+            width={"80%"}
+            margin={"auto"}
+            mt={"30px"}
+            // border={"1px solid green"}
+            borderTop={"2px solid #04454d"}
+            justifyContent={"space-between"}
+          >
+            <Flex
+              direction={{ base: "coloumn", lg: "row" }}
+              gap={10}
+              style={{
+                width: "20%",
+                margin: "auto",
+                // border: "1px solid cyan",
+                justifyContent: "space-around",
+              }}
+            >
+              <Image
+                h={"100%"}
+                w={"40%"}
+                src="https://web-static.wrike.com/tp/static/assets/img/footer/apple_en.svg"
+              />
+              <Image
+                h={"100%"}
+                w={"40%"}
+                src="https://web-static.wrike.com/tp/static/assets/img/footer/google_play_en.svg"
+              />
+            </Flex>
+            <Flex  width={"20%"} justifyContent={"space-around"} margin={"auto"}>
+              <SocialIcon
+                url="https://twitter.com/wrike"
+                fgColor="white"
+                bgColor="transparent"
+                className={style.socialIcons}
+                // _hover={{backgroundColor:"rgba(47, 176, 47, 0.757)"}}
+              />
+              <SocialIcon
+                url="https://www.facebook.com/Wrike"
+                fgColor="white"
+                bgColor="transparent"
+                className={style.socialIcons}
+              />
+              <SocialIcon
+                url="https://www.linkedin.com/company/wrike"
+                fgColor="white"
+                bgColor="transparent"
+                className={style.socialIcons}
+              />
+              <SocialIcon
+                url="https://www.youtube.com/user/WrikeTeam"
+                fgColor="white"
+                bgColor="transparent"
+                className={style.socialIcons}
+              />
+              <SocialIcon
+                url="https://www.instagram.com/wriketeam/"
+                fgColor="white"
+                bgColor="transparent"
+                className={style.socialIcons}
+              />
+            </Flex>
+            <Box width={"30%"}>
+              <Text color={"rgba(174, 174, 174, 0.85)"}>©2006-2022 Wrike, Inc. All rights reserved. Patented.</Text>
             </Box>
           </Flex>
         </Box>

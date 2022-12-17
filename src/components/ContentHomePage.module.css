@@ -10,3 +10,21 @@
 .flex1{
     cursor: pointer;
 }
+
+.textFooter{
+    color: rgba(174, 174, 174, 0.85);
+    font-size: large;
+    padding-bottom: 5px;
+    width: fit-content;
+}
+.textFooter:hover{
+    color: rgba(47, 176, 47, 0.757) ;
+    border-bottom: 1px solid rgba(47, 176, 47, 0.757);
+    cursor: pointer;
+}
+.socialIcons:hover{
+    /* fore: rgba(47, 176, 47, 0.757); */
+}
+.boxFooter{
+    /* width: 20%; */
+}

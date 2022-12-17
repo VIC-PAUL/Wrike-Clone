@@ -10,7 +10,8 @@ const Homepage = () => {
           color: "white",
           backgroundColor: "#181f38",
           position:"sticky",
-          top:0
+          top:0,
+          zIndex:20
           // height:"500px"
         }}
       >
