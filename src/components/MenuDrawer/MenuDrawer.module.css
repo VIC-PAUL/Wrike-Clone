@@ -1,0 +1,83 @@
+.drawer_Box{
+display: flex;
+font-weight: 600;
+font-size: 20px;
+margin: auto;
+margin-top: 20px;
+margin-left: 25px;
+gap:7px
+}
+
+.drawer_Content{
+    display: 'solid';
+    background-color:rgb(24 31 56) ;
+    font-size: "200px"; 
+    padding-top: '30px';
+  }
+.drawer_Header{
+  display: flex;
+  gap:15px;
+  padding-top: 50px;
+ background-color:rgb(24 31 56) ;
+  color:white ;
+  justify-content: space-between;
+}
+.drawer_Header_CloseIcon{
+   margin: auto;
+   margin-left: 80px;
+   margin-top: 30px;
+  }
+.drawer_Body{
+    gap:15px;
+    padding-top: 15px;
+    background-color:rgb(24 31 56) ;
+    color:white ;
+  }
+
+.drawer_Body_Child1{
+    display: flex;
+    gap:10px ;
+    margin-top: 5px;
+    padding: 6px;
+}
+.drawer_Body_Child1 h2{
+    font-size:16px;
+    margin-top:-4px;
+}
+.drawer_Body_Box{
+    display:flex;
+    margin-top: 5px;
+
+}
+
+.drawer_Body_Box1{
+    display:flex;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+.drawer_invite{
+    display: flex;
+    border: 1px solid gray;
+    margin: auto;
+    margin-top: 110%;
+}
+#invite{
+position:absolute;
+ bottom:30px;
+  border:1px solid gray;
+   width :70% ;
+   border-radius:10px
+}
+.drawer_Body_input{
+    padding:0px;
+    size:sm;
+    color:white;
+     
+}
+.drawer_Body_inputbutton{
+    margin-top: 10px;
+    font-size: 14px;
+    padding: -10px;
+
+}

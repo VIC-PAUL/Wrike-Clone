@@ -1,0 +1,118 @@
+.Notification_Alert{
+    background-color: blueviolet;
+    padding: 5px;
+    color: white;
+}
+.Project_Details{
+    display: flex;
+}
+.Project_Details_Data{
+display: flex;
+width: 30%;
+gap:10px
+}
+.Project_Details_Data div{
+ margin-top: 10px;
+  
+ }
+.Project_Details_Data0{
+background-color: green;
+color: white;
+padding:5px;
+ }
+ .Project_Details_Data00{
+    background-color: green;
+    color: white;
+    padding:4px 8px;
+    border-radius: 10px;
+    font-size: 14px;
+     }
+.Project_Details_Data1{
+display: flex;
+gap: 5px;
+}
+.Project_Details_Data11 div{
+   margin-top: -4px;
+    }
+.Project_Details_Data11{
+    display: flex;
+    background-color:rgb(217, 239, 214);
+    color: black;
+    padding:4px 8px;
+    border-radius: 10px;
+    font-size: 15px;
+    gap:7px
+}
+
+    /* Table */
+
+.Table_Data{
+ width: 98%; 
+  margin: auto;
+ margin-top: 50px;
+}
+.Table_Data1{
+  display: flex;
+  gap: 7px;
+ }
+ .Table_Data2{
+    display: flex;
+    margin-top: 11px;
+    gap: 7px;
+    margin-left: 40px;
+}
+.Table_Data22{
+    margin-top: -12px;
+}
+.Table_Data_Tab{
+width: 60%;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .Project_Details_Data{
+        display: flex;
+        width: 70%;
+        gap:2px;
+        margin-left: -30px;
+        }   
+        .Project_Details_Data00{
+            width: 90px;
+            font-size: 12px;
+             }
+             .Table_Data_Tab{
+                width: 420px;
+                }
+                
+}
+@media (min-width: 481px) and (max-width: 600px) {
+    .Project_Details_Data{
+        display: flex;
+        width: 70%;
+        gap:10px;
+        margin-left: -30px;
+        }   
+        .Project_Details_Data00{
+            width: 90px;
+            font-size: 12px;
+             }
+             .Table_Data_Tab{
+                width: 200px;
+                }
+                
+}
+@media (min-width: 601px) and (max-width: 830px) {
+    .Project_Details_Data{
+        display: flex;
+        width: 60%;
+        gap:10px;
+        margin-left: -30px;
+        }   
+        .Project_Details_Data00{
+            width: 90px;
+            font-size: 12px;
+             }
+             .Table_Data_Tab{
+                width: 300px;
+                }
+                
+}
