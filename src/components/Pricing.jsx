@@ -20,7 +20,7 @@ import {
 import { FaCheckCircle } from "react-icons/fa";
 import style from "./pricing.module.css";
 
-function PriceWrapper({ children }: { children: ReactNode }) {
+function PriceWrapper({ children }) {
   return (
     <Box
       mb={4}
@@ -77,7 +77,7 @@ export default function ThreeTierPricing() {
               py={5}
               borderBottomRadius={"xl"}
             >
-              <List spacing={3} textAlign="start" px={12}>
+              <List spacing={3} textAlign="start" px={12} pb={7}>
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="#08cf65" fontSize="1xl" />
                   Centralized task mangement
@@ -643,7 +643,7 @@ export default function ThreeTierPricing() {
                 src="https://web-static.wrike.com/tp/storage/uploads/rebrand-icon-manage-anything.svg"
                 alt="a1"
               />
-              <h3>Custom-build for your teams</h3>
+              <h3>Custom-build for teams</h3>
               <h4>
                 Pin important projects and decide exactly what to monitor in
                 your project dashboard, including tasks by custom status.
@@ -689,7 +689,8 @@ export default function ThreeTierPricing() {
                       flex="1"
                       textAlign="left"
                       fontweight="bold"
-                      fontSize={"18px"}
+                      fontSize={"16px"}
+                      pt={1}
                     >
                       What are the different types of licenses?
                     </Box>
@@ -726,7 +727,8 @@ export default function ThreeTierPricing() {
                       flex="1"
                       textAlign="left"
                       fontweight="bold"
-                      fontSize={"18px"}
+                      fontSize={"16px"}
+                      pt={1}
                     >
                       What happens when my trial has expired?
                     </Box>
@@ -755,7 +757,8 @@ export default function ThreeTierPricing() {
                       flex="1"
                       textAlign="left"
                       fontweight="bold"
-                      fontSize={"18px"}
+                      fontSize={"16px"}
+                      pt={1}
                     >
                       How do i purchase a subscriptiion?
                     </Box>
@@ -793,7 +796,8 @@ export default function ThreeTierPricing() {
                       flex="1"
                       textAlign="left"
                       fontweight="bold"
-                      fontSize={"18px"}
+                      fontSize={"16px"}
+                      pt={1}
                     >
                       How do Wrike’s dashboards with reporting?
                     </Box>
@@ -824,7 +828,8 @@ export default function ThreeTierPricing() {
                       flex="1"
                       textAlign="left"
                       fontweight="bold"
-                      fontSize={"18px"}
+                      fontSize={"16px"}
+                      pt={1}
                     >
                       What is professional Service?
                     </Box>
@@ -856,7 +861,8 @@ export default function ThreeTierPricing() {
                       flex="1"
                       textAlign="left"
                       fontweight="bold"
-                      fontSize={"18px"}
+                      fontSize={"16px"}
+                      pt={1}
                     >
                       What is professional Service explain?
                     </Box>
@@ -888,7 +894,8 @@ export default function ThreeTierPricing() {
                       flex="1"
                       textAlign="left"
                       fontweight="bold"
-                      fontSize={"18px"}
+                      fontSize={"16px"}
+                      pt={1}
                     >
                       What is professional Service has expired?
                     </Box>
@@ -920,7 +927,8 @@ export default function ThreeTierPricing() {
                       flex="1"
                       textAlign="left"
                       fontweight="bold"
-                      fontSize={"18px"}
+                      fontSize={"16px"}
+                      pt={1}
                     >
                       What is about your Service?
                     </Box>
