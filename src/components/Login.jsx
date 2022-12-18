@@ -3,31 +3,29 @@ import React, { useEffect, useState } from "react";
 import {
   Input,
   FormControl,
-  FormLabel,
   FormHelperText,
   Button,
   Flex,
   Text,
   Link,
   Image,
-  useMediaQuery,
-  useToast,
   Stack,
+  useToast,
   Spinner,
-  Box,
+  
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-// import { useContext } from "react";
-// import { AuthContext } from "../Context/AuthContext";
-function LogIn() {
+import { useContext } from "react";
+import { AuthContext } from "../Context/AuthContext";
+function Login() {
   const [isLoading, setIsLoading] = useState(true);
   const [userData, setUserData] = useState({
     email: "",
     password: "",
   });
-  //   const { SignIn } = useContext(AuthContext);
-    const Navigate = useNavigate();
-  //   const toast = useToast();
+    const { SignIn } = useContext(AuthContext);
+    // const Navigate = useNavigate();
+    const toast = useToast();
 
   useEffect(() => {
     setTimeout(() => {
@@ -35,51 +33,50 @@ function LogIn() {
     }, 500);
   }, []);
 
-  const [isLargerThan992] = useMediaQuery("(min-width: 992px)");
   const onChangeInput = (e) => {
     const { id, value } = e.target;
     setUserData({ ...userData, [id]: value });
   };
   const handleSubmit = (e) => {
-    // e.preventDefault();
-    // var a = JSON.parse(localStorage.getItem("Users") || "[]");
-    // var login = false;
-    // let loogedInUserName = null;
-    // a.forEach((elem) => {
-    //   if (elem.email == userData.email && elem.password == userData.password) {
-    //     login = true;
-    //     loogedInUserName = elem;
-    //     return;
-    //   } else {
-    //     login = false;
-    //   }
-    // });
-    // if (login) {
-    //   localStorage.setItem("loginUser", JSON.stringify(loogedInUserName));
-    //   SignIn();
-    //   setTimeout(() => {
-    //     Navigate("/");
-    //   }, 2000);
-    //   toast({
-    //     title: "Login Successfull !!!",
-    //     status: "success",
-    //     duration: 2000,
-    //     isClosable: true,
-    //     position: "top",
-    //   });
-    //   setUserData({
-    //     email: "",
-    //     password: "",
-    //   });
-    // } else {
-    //   toast({
-    //     title: "Login Failed !!!",
-    //     status: "error",
-    //     duration: 1500,
-    //     isClosable: true,
-    //     position: "top",
-    //   });
-    // }
+    e.preventDefault();
+    var a = JSON.parse(localStorage.getItem("Users") || "[]");
+    var login = false;
+    let loogedInUserName = null;
+    a.forEach((elem) => {
+      if (elem.email == userData.email && elem.password == userData.password && elem.isActive===true) {
+        login = true;
+        loogedInUserName = elem;
+        return;
+      } else {
+        login = false;
+      }
+    });
+    if (login) {
+      localStorage.setItem("loginUser", JSON.stringify(loogedInUserName));
+      SignIn();
+      // setTimeout(() => {
+      //   Navigate("/");
+      // }, 2000);
+      toast({
+        title: "Login Successfull !!!",
+        status: "success",
+        duration: 2000,
+        isClosable: true,
+        position: "top",
+      });
+      setUserData({
+        email: "",
+        password: "",
+      });
+    } else {
+      toast({
+        title: "Login Failed !!!",
+        status: "error",
+        duration: 1500,
+        isClosable: true,
+        position: "top",
+      });
+    }
   };
 
   return (
@@ -183,4 +180,4 @@ function LogIn() {
   );
 }
 
-export default LogIn;
+export default Login;

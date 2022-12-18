@@ -15,9 +15,11 @@ import {
 import { Checkbox } from "@chakra-ui/react";
 
 
+
 function SignUp({nextStep,handleChange,values}) {
   const [isLoading, setIsLoading] = useState(true);
   const toast = useToast();
+  
 
   useEffect(() => {
     setTimeout(() => {

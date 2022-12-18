@@ -5,20 +5,11 @@ import {
   FormControl,
   Button,
   Flex,
-  useMediaQuery,
-  Box,
-  useToast,
   SimpleGrid,
-  Select,
   Image,
   Text,
   Spinner,
-  Link,
-  Stack,
-  Radio,
-  RadioGroup,
 } from "@chakra-ui/react";
-import { Checkbox, CheckboxGroup } from "@chakra-ui/react";
 
 const ProjName = ({ prevStep, nextStep, handleChange, values }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -97,7 +88,7 @@ const ProjName = ({ prevStep, nextStep, handleChange, values }) => {
                 type="submit"
                 colorScheme="green"
                 onClick={Previous}
-                mr={150}
+                mr={['50','120','150','150','150','150']}
               >
                 Previous
               </Button>
@@ -108,7 +99,7 @@ const ProjName = ({ prevStep, nextStep, handleChange, values }) => {
                 type="submit"
                 colorScheme="green"
                 onClick={Continue}
-                ml={180}
+                ml={['50','120','150','150','150','150']}
               >
                 Next
               </Button>
