@@ -1,17 +1,30 @@
 import React from "react";
-import Top from "../components/Top";
+import Header from "../components/Header";
+import ContentHomePage from "../components/ContentHomePage";
+import Footer from "../components/Footer";
 
 const Homepage = () => {
   return (
-    <div 
-    // className="border border-red-500 m-auto"
-    style={{
-      // border:"1px solid red",
-      margin:"auto"
-    }}
-    >
+    <div>
+      <section
+        style={{
+          color: "white",
+          backgroundColor: "#181f38",
+          position:"sticky",
+          top:0,
+          zIndex:20
+          // height:"500px"
+        }}
+      >
+        <Header />
+      </section>
+      <section style={{
+        backgroundColor:"#ebf5f3"
+      }}>
+        <ContentHomePage />
+      </section>
       <section>
-        <Top />
+        <Footer />
       </section>
     </div>
   );
