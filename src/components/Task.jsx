@@ -1,15 +1,18 @@
-import React from "react";
+import React from 'react'
 import { useState, useEffect } from "react";
 import {
   Input,
   FormControl,
   Button,
   Flex,
-  SimpleGrid,
+  SimpleGrid, 
   Image,
   Text,
   Spinner,
 } from "@chakra-ui/react";
+import { useContext } from "react";
+import { AuthContext } from "../Context/AuthContext";
+
 
 const Task = ({ prevStep, nextStep, handleChange, values }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -18,9 +21,13 @@ const Task = ({ prevStep, nextStep, handleChange, values }) => {
       setIsLoading(false);
     }, 500);
   }, []);
-  const Continue = (e) => {
+
+  const { SignUp } = useContext(AuthContext);
+
+  const  Continue=(e) => {
     e.preventDefault();
     nextStep();
+    SignUp(values);
   };
   const Previous = (e) => {
     e.preventDefault();
@@ -39,7 +46,7 @@ const Task = ({ prevStep, nextStep, handleChange, values }) => {
           />
         </Flex>
       ) : (
-        <SimpleGrid columns={["1", "1", "1", "2", "2", "2"]} w="90%" m="auto">
+        <SimpleGrid columns={['1','1','1','2','2','2']} w="90%" m="auto">
           <Flex justify="center" align="center">
             <SimpleGrid>
               <Image
@@ -48,39 +55,37 @@ const Task = ({ prevStep, nextStep, handleChange, values }) => {
                 w="300px"
                 m="auto"
               />
-              <Text fontSize="3xl" w="90%" m="auto" textAlign="left">
-                What needs to be done?
-              </Text>
+              <Text fontSize="3xl" w="90%" m="auto" textAlign="left">What needs to be done?</Text>
               <Input
-                w="90%"
-                m="auto"
+                w="90%" 
+                m="auto" 
                 mb={4}
                 value={values.task1}
                 type="text"
                 id="text"
-                variant="filled"
-                onChange={handleChange("task1")}
+                variant='filled'
+                onChange={handleChange('task1')}
                 placeholder="First task"
               />
-              <Input
-                w="90%"
-                m="auto"
+               <Input
+                w="90%" 
+                m="auto" 
                 mb={4}
                 value={values.task2}
                 type="text"
                 id="text"
-                variant="filled"
-                onChange={handleChange("task2")}
+                variant='filled'
+                onChange={handleChange('task2')}
                 placeholder="Second task"
               />
-              <Input
-                w="90%"
-                m="auto"
+               <Input
+                w="90%" 
+                m="auto" 
                 value={values.task3}
                 type="text"
                 id="text"
-                variant="filled"
-                onChange={handleChange("task3")}
+                variant='filled'
+                onChange={handleChange('task3')}
                 placeholder="Third task"
               />
             </SimpleGrid>
@@ -100,6 +105,7 @@ const Task = ({ prevStep, nextStep, handleChange, values }) => {
                 alt="signup"
                 mb={10}
               />
+              
 
               <Button
                 w={["20", "20", "20", "20", "20", "20"]}
@@ -108,7 +114,7 @@ const Task = ({ prevStep, nextStep, handleChange, values }) => {
                 type="submit"
                 colorScheme="green"
                 onClick={Previous}
-                mr={["50", "120", "150", "150", "150", "150"]}
+                mr={['50','120','150','150','150','150']}
               >
                 Previous
               </Button>
@@ -119,7 +125,7 @@ const Task = ({ prevStep, nextStep, handleChange, values }) => {
                 type="submit"
                 colorScheme="green"
                 onClick={Continue}
-                ml={["50", "120", "150", "150", "150", "150"]}
+                ml={['50','120','150','150','150','150']}
               >
                 Next
               </Button>

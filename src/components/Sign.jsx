@@ -18,16 +18,19 @@ export default class Sign extends Component {
     number: "",
     employees: "", 
     dept: "",
+    proj:"",
     role: "",
     space: "",
-    proj: "",
     task1: "",
     task2: "",
     task3: "",
     email1: "",
     email2: "",
     email3: "",
+    isActive:true,
+    isAdmin:false
   };
+
 
   // go back to previous step
   prevStep = () => {
@@ -66,7 +69,45 @@ export default class Sign extends Component {
       email1,
       email2,
       email3,
+      isActive,
+      isAdmin
     } = this.state;
+
+    const d = new Date();
+    let date= d.getDate()+"-"+d.getMonth()+"-"+d.getFullYear();
+
+    const projectData={
+        "email":email,
+        "project": [
+          {
+            "id": 1,
+            "title": proj,
+            "data": [
+              {
+                "name": task1,
+                "status": "new",
+                "risk": "low",
+                "date": date,
+                "assigne": "abc@xyz.com"
+              },
+              {
+                "name": task2,
+                "status": "new",
+                "risk": "low",
+                "date": date,
+                "assigne": "abc@xyz.com"
+              },
+              {
+                "name": task3,
+                "status": "new",
+                "risk": "low",
+                "date": date,
+                "assigne": "abc@xyz.com"
+              }
+            ]
+          }
+        ]
+      }
     const values = {
       email,
       password,
@@ -85,8 +126,10 @@ export default class Sign extends Component {
       email1,
       email2,
       email3,
+      isActive,
+      isAdmin
     };
-
+   
     switch (step) {
       case 1:
         return (
@@ -139,6 +182,8 @@ export default class Sign extends Component {
             nextStep={this.nextStep}
             handleChange={this.handleChange}
             values={values}
+            cred={values.email}
+            cred1={values.password}
           />
         );
       case 7:
@@ -148,6 +193,7 @@ export default class Sign extends Component {
             nextStep={this.nextStep}
             handleChange={this.handleChange}
             values={values}
+            pojectdat={projectData}
           />
         );
       default:
