@@ -17,7 +17,6 @@ import {
 } from "@chakra-ui/react";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 
-
 const Dashboard = () => {
   const videoEl = useRef(null);
 
@@ -38,16 +37,7 @@ const Dashboard = () => {
       <div>
         <div className={style.compoent1}>
           <div>
-            <h3>
-              {" "}
-              <Icon
-                as={BsArrowLeftShort}
-                fontSize="1.9rem"
-                marginRight={"1px"}
-                paddingTop="4px"
-              />
-              All features{" "}
-            </h3>
+            <h3>All features</h3>
           </div>
 
           <div className={style.compoent1_2}>
@@ -145,9 +135,8 @@ const Dashboard = () => {
         <div className={style.compoent3}>
           <div className={style.compoent3_tab}>
             <Accordion
-              color="#fff"
-              backgroundColor="#04454d"
-              // backgroundColor="#ebf5f3"
+              color="black"
+              backgroundColor="#ebf5f3"
               borderRadius="10px"
               padding="5px"
             >
@@ -530,7 +519,7 @@ const Dashboard = () => {
               See All Fetures
               <Icon
                 as={BsArrowRightShort}
-                mt={"20px"}
+                mt={"22px"}
                 ml={"1rem"}
                 paddingTop="rem"
                 border={"1px solid black"}
@@ -642,7 +631,7 @@ const Dashboard = () => {
                       fontweight="bold"
                       fontSize={"18px"}
                     >
-                      What should be included in a project management dashboard?
+                      What should be included in a project management?
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
@@ -697,7 +686,7 @@ const Dashboard = () => {
                       fontweight="bold"
                       fontSize={"18px"}
                     >
-                      Section 1 title
+                    How do Wrike’s dashboards help with reporting?
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
@@ -708,10 +697,8 @@ const Dashboard = () => {
                   className={style.compoent11_2}
                   textAlign="left"
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                All teams on every Wrike paid plan can view Wrike’s project
+                dashboards when you start a free trial.
                 </AccordionPanel>
               </AccordionItem>
             </Accordion>

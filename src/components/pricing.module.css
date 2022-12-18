@@ -23,8 +23,8 @@
   color: #04454d;
 }
 /* compent middleTag end 
-  
-  satrt onlyText comoent */
+
+satrt onlyText comoent */
 
 .onlyText {
   /* border: 1px solid red; */
@@ -49,8 +49,8 @@
 }
 
 /* compent onlyText end 
-  
-  satrt 3 comoent */
+
+satrt 3 comoent */
 
 .compnylogo {
   /* border: 2px solid white; */
@@ -75,8 +75,8 @@
 }
 
 /* compent compnylogo end 
-  
-  satrt headerpard comoent */
+
+satrt headerpard comoent */
 
 .headerpard {
   /* border: 1px solid red; */
@@ -103,8 +103,8 @@
 }
 
 /* compent headerpard end 
-  
-  satrt gridTag comoent */
+
+satrt gridTag comoent */
 
 .gridTag {
   /* border: 1px solid black; */
@@ -151,8 +151,8 @@
 }
 
 /* compent gridTag end 
-  
-  satrt "faq" comoent */
+
+satrt "faq" comoent */
 
 .faq {
   /* border: 4px solid red; */
@@ -194,7 +194,7 @@
   .middleTag {
     /* border :1px solid red; */
     width: 100%;
-    height: 130px;
+    height: auto;
     background-color: #ebf5f3;
     margin-top: -30px;
     padding-top: 5px;
@@ -216,8 +216,8 @@
     color: #04454d;
   }
   /* compent middleTag end 
-          
-          satrt onlyText comoent */
+        
+        satrt onlyText comoent */
 
   .onlyText {
     /* border: 1px solid red; */
@@ -244,8 +244,8 @@
   }
 
   /* compent onlyText end 
-            
-            satrt 3 comoent */
+          
+          satrt 3 comoent */
 
   .compnylogo {
     /* border: 2px solid rgb(8, 8, 8); */
@@ -271,8 +271,8 @@
   }
 
   /* compent compnylogo end 
-            
-            satrt headerpard comoent */
+          
+          satrt headerpard comoent */
 
   .headerpard {
     /* border: 1px solid red; */
@@ -299,8 +299,8 @@
   }
 
   /* compent headerpard end 
-    
-    satrt gridTag comoent */
+  
+  satrt gridTag comoent */
 
   .gridTag {
     /* border: 1px solid black; */
@@ -346,8 +346,8 @@
   }
 
   /* compent gridTag end 
-    
-    satrt "faq" comoent */
+  
+  satrt "faq" comoent */
 
   .faq {
     /* border: 4px solid red; */
@@ -414,8 +414,8 @@
     margin-right: 24px;
   }
   /* compent middleTag end 
-              
-              satrt onlyText comoent */
+            
+            satrt onlyText comoent */
 
   .onlyText {
     /* border: 1px solid red; */
@@ -442,8 +442,8 @@
   }
 
   /* compent onlyText end 
-            
-            satrt 3 comoent */
+          
+          satrt 3 comoent */
 
   .compnylogo {
     /* border: 2px solid rgb(8, 8, 8); */
@@ -473,8 +473,8 @@
   }
 
   /* compent compnylogo end 
-            
-            satrt headerpard comoent */
+          
+          satrt headerpard comoent */
 
   .headerpard {
     /* border: 1px solid red; */
@@ -501,8 +501,8 @@
   }
 
   /* compent headerpard end 
-    
-    satrt gridTag comoent */
+  
+  satrt gridTag comoent */
 
   .gridTag {
     /* border: 1px solid black; */
@@ -541,18 +541,18 @@
     text-align: left;
     color: #2b3857;
     width: 65%;
-    font-size: 15px;
-    line-height: 28px;
+    font-size: 13px;
+    line-height: 20px;
     margin-top: 20px;
   }
 
   /* compent gridTag end 
-    
-    satrt "faq" comoent */
+  
+  satrt "faq" comoent */
 
   .faq {
     /* border: 4px solid red; */
-    width: 90%;
+    width: 100%;
     height: auto;
     margin-top: 30px;
     margin-bottom: 40px;

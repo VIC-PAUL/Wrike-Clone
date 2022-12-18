@@ -144,31 +144,39 @@
   margin-top: 30px;
   width: 100%;
   display: flex;
-  gap: 50px;
+  justify-content: center;
+  text-align: center;
+  gap: 40px;
 }
 
 .compoent3_image {
+  /* border:1px solid red; */
   width: 50%;
-  margin-left: 140px;
+  margin-left: 100px;
   padding-top: 8px;
 }
 
 .compoent3_tab {
   /* border: 2px solid #04454d; */
-  width: 35%;
-  padding: 30px;
+  width: 48%;
+  padding: 25px;
   display: block;
+  margin-left: 20px;
 }
 .compoent3_tab h1 {
+  /* border: 2px solid #53e6f9; */
+  height: 45px;
   font-weight: 500;
   font-size: 20px;
   text-align: left;
+  padding-top: 2px;
 }
 
 .compoent3_tab p {
   font-size: 15px;
   line-height: 24px;
   text-align: left;
+  font-weight: 300;
 }
 
 /* compent 3 complete */
@@ -418,6 +426,7 @@
   width: 100%;
   height: auto;
   margin-top: 20px;
+  padding-top: 20px;
 }
 
 .compoent9_1 {
@@ -758,6 +767,44 @@
   /* compent 2 complete */
 
   /* compent 3 start */
+
+  .compoent3 {
+    /* border: 2px solid black; */
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+  }
+  .compoent3_image {
+    /* border:1px solid red; */
+    width: 100%;
+    margin-right: 12px;
+  }
+
+  .compoent3_tab {
+    /* border: 2px solid #04454d; */
+    width: 100%;
+    padding: 4px;
+    display: block;
+    margin-left: 45px;
+  }
+  .compoent3_tab h1 {
+    /* border: 2px solid #53e6f9; */
+    height: 45px;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: left;
+    padding-top: 4px;
+  }
+
+  .compoent3_tab p {
+    font-size: 15px;
+    line-height: 20px;
+    text-align: left;
+    font-weight: 300;
+  }
 
   /* compent 3 complete */
 
@@ -1261,6 +1308,35 @@
   /* compent 2 complete */
 
   /* compent 3 start */
+
+  .compoent3 {
+    /* border: 2px solid black; */
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+  }
+  .compoent3_image {
+    /* border:1px solid red; */
+    width: 100%;
+    margin-right: 12px;
+  }
+  .compoent3_tab h1 {
+    /* border: 2px solid #53e6f9; */
+    height: 45px;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: left;
+    padding-top: 4px;
+  }
+  .compoent3_tab p {
+    font-size: 10px;
+    line-height: 17px;
+    text-align: left;
+    font-weight: 300;
+  }
 
   /* compent 3 complete */
 
