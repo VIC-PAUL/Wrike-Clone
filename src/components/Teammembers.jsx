@@ -10,9 +10,13 @@ import {
   Text,
   Spinner,
 } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../Context/AuthContext";
 
 
-const Teammembers = ({ prevStep, nextStep, handleChange, values }) => {
+const Teammembers = ({ prevStep, handleChange, values,pojectdat }) => {
+  const Navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
@@ -20,29 +24,19 @@ const Teammembers = ({ prevStep, nextStep, handleChange, values }) => {
     }, 500);
   }, []);
 
+  const { apidata } = useContext(AuthContext);
+  
   const Previous = (e) => {
     e.preventDefault();
     prevStep();
   };
 
-  async function sub(){
-    localStorage.setItem("User", values.email1);
-    let res=await fetch("https://busy-houndstooth-clam.cyclic.app/users",{
-      method:"POST",
-      body:JSON.stringify(values),
-      headers:{
-        "Content-Type":"application/json",
-        "Accept":"application/json"
-      },
-     
-    })
-    res= await res.json()
-    console.log(res);
-    // var users = JSON.parse(localStorage.getItem("Users") || "[]");
-    // users.push(res);
-    // localStorage.setItem("Users", JSON.stringify(res));
-   
-  }
+
+  const  Continue=() => {
+    apidata(pojectdat)
+    Navigate("/login");
+  };
+
   return (
     <>
       {isLoading ? (
@@ -130,7 +124,7 @@ const Teammembers = ({ prevStep, nextStep, handleChange, values }) => {
                 bgColor="#2F855A"
                 type="submit"
                 colorScheme="green"
-                onClick={sub}
+                onClick={Continue}
                 ml={['50','120','150','150','150','150']}
               >
                 Submit

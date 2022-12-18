@@ -24,7 +24,7 @@ function Login() {
     password: "",
   });
     const { SignIn } = useContext(AuthContext);
-    // const Navigate = useNavigate();
+    const Navigate = useNavigate();
     const toast = useToast();
 
   useEffect(() => {
@@ -77,6 +77,7 @@ function Login() {
         position: "top",
       });
     }
+    Navigate("/homepage")
   };
 
   return (

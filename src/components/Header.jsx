@@ -27,11 +27,12 @@ import { FiChevronDown } from "react-icons/fi";
 import { MdMenu, MdOutlineLanguage } from "react-icons/md";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router";
 
 const Header = () => {
   const [width, setWidth] = useState(window.innerWidth);
   // const [cheronIcon, setChironIcon] = useState(false);
-
+  const navigate = useNavigate();
   const { isOpen, onOpen, onClose } = useDisclosure();
   // const { Open, oOpen, Close } = useDisclosure()
   const btnRef = React.useRef();
@@ -56,7 +57,14 @@ const Header = () => {
         // border={"1px solid cyan"}
         margin={"auto"}
         alignItems={"center"}
-
+        style={{
+          color: "white",
+          backgroundColor: "#181f38",
+          position:"sticky",
+          top:0,
+          zIndex:20
+          // height:"500px"
+        }}
         // style={{
         //   position:"relative",
         //   fontWeight:"bold",
@@ -128,14 +136,24 @@ const Header = () => {
     return (
       <Flex
         // className=" font-bold items-center h-18 w-[87%] m-auto pt-2 pb-2 "
+        style={{
+          color: "white",
+          backgroundColor: "#181f38",
+          position:"sticky",
+          top:0,
+          zIndex:20
+          // height:"500px"
+        }}
         fontWeight={"bold"}
         alignItems={"center"}
-        w={"87%"}
+        w={"100%"}
         height={"5rem"}
         // border={"1px solid cyan"}
         margin={"auto"}
         pt={"0.5rem"}
         pb={"0.5rem"}
+        pl={"6.5%"}
+        pr={"6.5%"}
       >
         <Stack
           className={style.headLeft}
@@ -645,7 +663,8 @@ const Header = () => {
                         style={{}}
                         src="https://web-static.wrike.com/tp/storage/uploads/62538033-1d86-410b-bef8-73a09a6c52be/icon-header-tab2-dashboard.svg"
                       />
-                      <Box>
+                      <Box onClick={()=>{navigate("/dashboard")}}>
+                        
                         <h1 style={{ fontWeight: "bold" }}>Dashboards</h1>
                         <p style={{ fontSize: "16px" }}>
                           Visualize tasks, processes, analytics, and more.
@@ -1330,7 +1349,7 @@ const Header = () => {
           </Menu>
           <Button
           // className=" rounded-md hover:backdrop-blur-sm hover:bg-white/10 h-10 w-20 p-2"
-          >
+          onClick={()=>{navigate("/pricing")}}>
             Pricing
           </Button>
         </Stack>
@@ -1375,6 +1394,7 @@ const Header = () => {
               // className="w-[100%] h-[100%] "
               backgroundColor={"transparent"}
               _hover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+              onClick={()=>{navigate("/login")}}
             >
               Login
             </Button>
@@ -1385,6 +1405,7 @@ const Header = () => {
             <Button
               bg={"rgb(34 197 94)"}
               _hover={{ bg: "rgba(34,197,94,0.8)" }}
+              onClick={()=>{navigate("/signup")}}
             >
               Start for free
             </Button>

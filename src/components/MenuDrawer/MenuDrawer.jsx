@@ -48,9 +48,11 @@ export function MenuDrawer({ title = "Home" }) {
   const [project_id, set_Project_id] = useState(0);
   const [count, setcount] = useState(0);
   const toast = useToast();
+  let localdata=JSON.parse(localStorage.getItem("Users"));
+  let email = localdata[localdata.length-1].email ;
+  console.log(email)
   useEffect(async () => {
     setLoading(true);
-    let email = "100nukhola123@gmail.com";
     let datais = await GetProjectData(email);
     set_Project_Data(datais.project);
     set_Project_id(datais.id);
