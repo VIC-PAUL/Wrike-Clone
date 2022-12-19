@@ -118,12 +118,7 @@ const Dashboard = () => {
 
         <div className={style.compoent2}>
           <div className={style.compoent2_1}>
-            <h1>
-              <span className={style.underlineColour}>
-                Prioritize instantly
-              </span>
-              with project dashboards
-            </h1>
+            <h1>Prioritize instantly with project dashboards</h1>
             <p>
               Get a detailed overview of project and team progress in real time
               with Wrike’s project dashboard. Here’s a look at the features
@@ -686,7 +681,7 @@ const Dashboard = () => {
                       fontweight="bold"
                       fontSize={"18px"}
                     >
-                    How do Wrike’s dashboards help with reporting?
+                      How do Wrike’s dashboards help with reporting?
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
@@ -697,8 +692,8 @@ const Dashboard = () => {
                   className={style.compoent11_2}
                   textAlign="left"
                 >
-                All teams on every Wrike paid plan can view Wrike’s project
-                dashboards when you start a free trial.
+                  All teams on every Wrike paid plan can view Wrike’s project
+                  dashboards when you start a free trial.
                 </AccordionPanel>
               </AccordionItem>
             </Accordion>

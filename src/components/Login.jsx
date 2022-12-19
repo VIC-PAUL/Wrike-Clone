@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import { AuthContext } from "../Context/AuthContext";
+import { AuthContext } from "../context/AuthContext";
 function Login() {
   const [isLoading, setIsLoading] = useState(true);
   const [userData, setUserData] = useState({
