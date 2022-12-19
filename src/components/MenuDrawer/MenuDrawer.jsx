@@ -49,7 +49,8 @@ export function MenuDrawer({ title = "Home" }) {
   const [count, setcount] = useState(0);
   const toast = useToast();
   let localdata=JSON.parse(localStorage.getItem("Users"));
-  let email = localdata[localdata.length-1].email ;
+  // let email = localdata[localdata.length-1].email ;
+   let email = "pantuugurjar@gmail.com";
   console.log(email)
   useEffect(async () => {
     setLoading(true);

@@ -54,6 +54,8 @@ const Header = () => {
         width={"87%"}
         pt={"0.5rem"}
         pb={"0.5rem"}
+        pl={"6.5%"}
+        pr={"6.5%"}
         // border={"1px solid cyan"}
         margin={"auto"}
         alignItems={"center"}
