@@ -9,7 +9,7 @@
 .compoent1 h3 {
   color: #08cf65;
   font-size: 2rem;
-  margin: auto;
+  text-align: center;
   font-size: 27px;
   margin-top: 6rem;
   font-weight: bold;
@@ -23,8 +23,9 @@
   /* border: 2px solid white; */
   width: 59%;
   margin: auto;
+  text-align: center;
   color: #fff;
-  font-size: 42px;
+  font-size: 41px;
   line-height: 54px;
   margin-top: 30px;
   font-weight: bold;
@@ -34,6 +35,7 @@
   /* border: 2px solid rgb(213, 17, 17); */
   width: 43%;
   margin: auto;
+  text-align: center;
   color: #fff;
   font-weight: 400;
   font-size: 18px;
@@ -110,6 +112,7 @@
 .compoent2_1 {
   /* border:1px solid red; */
   margin: auto;
+  text-align: center;
   margin-top: 20px;
 }
 
@@ -126,7 +129,7 @@
 
 .compoent2_1 p {
   /* border:1px solid rgb(0, 0, 0); */
-  width: 55%;
+  width: 59%;
   margin: auto;
   margin-top: 20px;
   font-weight: 400;
@@ -189,8 +192,13 @@
 
   margin-top: 20px;
 }
+.compoent4_1 {
+  /* border: 1px solid red; */
+  text-align: center;
+}
 
 .compoent4_1 Button {
+  /* border: 2px solid red; */
   background-color: #04454d;
   border-color: #04454d;
   color: #fff;
@@ -204,11 +212,15 @@
 
 .compoent4_2 {
   /* border:1px solid red; */
+  width: 98%;
   margin: auto;
+  text-align: center;
   margin-top: 20px;
 }
 .compoent4_2 h1 {
   /* border:1px solid red; */
+  margin: auto;
+  width: 55%;
   font-size: 32px;
   line-height: 38px;
   font-weight: bold;
@@ -217,7 +229,7 @@
 
 .compoent4_2 p {
   /* border:1px solid rgb(0, 0, 0); */
-  width: 55rem;
+  width: 63%;
   margin: auto;
   margin-top: 20px;
   font-weight: 400;
@@ -232,13 +244,14 @@
 
 .compoent5 {
   /* border: 1px solid black; */
-  width: 99%;
+  width: 98%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 300px);
-  gap: 15px;
-  margin: 10px;
-  padding-left: 15px;
+  gap: 25px;
+  margin: 20px;
+  padding-left: 14px;
+  margin-top: 25px;
 }
 
 .compoent5_1 {
@@ -276,6 +289,7 @@
 .compoent6 {
   /* border: 2px solid red; */
   width: 100%;
+  text-align: center;
 }
 .compoent6_1 Button {
   background-color: #08cf65;
@@ -308,6 +322,7 @@
   gap: 20px;
   margin-top: 40px;
   /* border: 2px solid red; */
+  padding: 10px;
 }
 
 .compoent7 > div {
@@ -377,6 +392,7 @@
 .compoent8_heading {
   /* border: 1px solid red; */
   margin-top: 30px;
+  text-align: center;
   font-weight: bold;
   font-size: 27px;
 }
@@ -385,8 +401,9 @@
   /* border: 2px solid black; */
   display: flex;
   justify-content: space-evenly;
-  gap: 20px;
+  gap: 18px;
   margin-top: 40px;
+  padding: 8px;
 }
 
 .compoent8 > div {
@@ -427,6 +444,8 @@
   height: auto;
   margin-top: 20px;
   padding-top: 20px;
+  text-align: center;
+  /* border: 2px solid red; */
 }
 
 .compoent9_1 {
@@ -435,6 +454,8 @@
 
 .compoent9_1 h1 {
   /* border: 2px solid red; */
+  width: 43%;
+  margin: auto;
   font-size: 27px;
   font-weight: bold;
   margin-top: 38px;
@@ -454,6 +475,7 @@
   justify-content: space-evenly;
   gap: 20px;
   margin-top: 25px;
+  padding: 10px;
 }
 
 .compoent9_2 > div {
@@ -548,6 +570,7 @@
   /* border: 2px solid teal; */
   width: 60%;
   padding: 50px;
+  text-align: center;
 }
 
 .Component10_Secound_Div > h1 {
@@ -1094,7 +1117,7 @@
   }
 
   .Component10_Secound_Div > h1 {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     font-weight: 600;
     font-size: 18px;
     line-height: 26px;
@@ -1104,7 +1127,6 @@
 
   .Component10_Secound_Div > h2 {
     /* border: 1px solid white; */
-    font-feature-settings: "ss01" on, "tnum" on;
     font-weight: 700;
     font-size: 28px;
     line-height: 36px;
@@ -1135,7 +1157,7 @@
     border-radius: 10px;
     /* border: 1px solid; */
     text-align: center;
-    width: 505%;
+    width: 50%;
     background-color: #08cf65;
     color: #fff;
     font-size: 21px;
@@ -1608,15 +1630,60 @@
   /* compent 9 complete */
 
   /* compeent 10 start */
+  .compoent10 {
+    /* border: 3px solid black; */
+    width: 100%;
+    height: auto;
+    background-color: #04454d;
+    margin-bottom: 250px;
+  }
 
-  /* 
-.compoent10 {
-  border: 3px solid black;
-  width: 100%;
-  height: auto;
-  background-color: #04454d;
- 
-} */
+  .Component10_Secound_Div > h1 {
+    /* border: 1px solid white; */
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #657694;
+    width: 100%;
+  }
+
+  .Component10_Secound_Div > h2 {
+    /* border: 1px solid white; */
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 30px;
+    color: white;
+    margin-bottom: 15px;
+  }
+
+  .compoent10_input_Main_div {
+    display: flex;
+    border: 1px solid white;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 160%;
+  }
+
+  .compoent10_input_Main_div > input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid;
+    text-align: center;
+    width: 45%;
+    font-size: 21px;
+  }
+
+  .compoent10_input_Main_div > button {
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid;
+    text-align: center;
+    width: 52%;
+    background-color: #08cf65;
+    color: #fff;
+    font-size: 21px;
+  }
 
   .compoent11 {
     /* border: 4px solid red; */
