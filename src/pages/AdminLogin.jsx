@@ -10,8 +10,9 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 const AdminLogin = () => {
+  const navigate = useNavigate()
   // const [isLoading, setIsLoading] = useState(true);
   const [currentAdmin, setCurrentAdmin] = useState([]);
   let adminData;
@@ -21,7 +22,7 @@ const AdminLogin = () => {
       `https://busy-houndstooth-clam.cyclic.app/adminLogin`
     );
     adminData = await adminData.json();
-    console.log(adminData);
+    // console.log(adminData);
     return adminData;
   };
 
@@ -48,6 +49,7 @@ const AdminLogin = () => {
         currentAdmin.password == userData.password
       ) {
         alert("Login Succesful");
+        navigate("/admindash")
       } else {
         alert("Please check credentials");
       }
@@ -73,8 +75,9 @@ const AdminLogin = () => {
 
   //     // console.log(userData.email);
   //   };
+  adminDataFunc();
   useEffect(() => {
-      adminDataFunc();
+      
     //   addAdmin()
     //   console.log(adminData)
   }, []);

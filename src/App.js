@@ -13,6 +13,7 @@ import Dashpage from './pages/Dashpage';
 import Homeafter from './pages/Homeafter';
 import AdminLogin from './pages/AdminLogin';
 import PrivateRoute from "./components/PrivateRoute";
+import AdminDashboard from './pages/AdminDashboard';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/pricing" element={<Pricingpage />}></Route>
         <Route path="/dashboard" element={<Dashpage />}></Route>
         <Route path="/admin" element={<AdminLogin />}></Route>
+        <Route path="/admindash" element={<AdminDashboard/>}></Route>
     <Route path={"/Projects/:project_id"} element={<SingleProjectPage/>} />
     {/* <Route path={"*"} element={<div>404 Not Found</div>}></Route> */}
       </Routes>

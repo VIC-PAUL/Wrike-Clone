@@ -51,7 +51,7 @@ const Header = () => {
         position={"relative"}
         fontSize={"bold"}
         height={"80px"}
-        width={"87%"}
+        width={"100%"}
         pt={"0.5rem"}
         pb={"0.5rem"}
         pl={"6.5%"}
